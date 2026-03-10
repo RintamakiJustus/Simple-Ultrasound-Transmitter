@@ -1,0 +1,499 @@
+
+Ultrasound_transmitter.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00803e00  00803e00  000002b6  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         0000008a  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      0000002f  00000000  00000000  000002b6  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  000002e5  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000078  00000000  00000000  000002f3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000028f2  00000000  00000000  0000036b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000016b5  00000000  00000000  00002c5d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000054d  00000000  00000000  00004312  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000ec  00000000  00000000  00004860  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000973  00000000  00000000  0000494c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000013a  00000000  00000000  000052bf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000068  00000000  00000000  000053f9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000002  00000218  00000218  000002ac  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00005464  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.TM_sendByte 0000005e  0000008a  0000008a  0000011e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.TM_start 00000012  000001c2  000001c2  00000256  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.TM_stop 00000012  000001d4  000001d4  00000268  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.TM_displayInit 00000012  000001e6  000001e6  0000027a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.setup   00000044  000000e8  000000e8  0000017c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.set_frequency 00000012  000001f8  000001f8  0000028c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.read_buttons 00000030  00000162  00000162  000001f6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.select_frequency 00000030  00000192  00000192  00000226  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.main    00000036  0000012c  0000012c  000001c0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .bss.enable   00000001  00803e00  00803e00  000002b6  2**0
+                  ALLOC
+ 24 .bss.b_play   00000001  00803e01  00803e01  000002b6  2**0
+                  ALLOC
+ 25 .bss.b_prev   00000001  00803e02  00803e02  000002b6  2**0
+                  ALLOC
+ 26 .bss.b_next   00000001  00803e03  00803e03  000002b6  2**0
+                  ALLOC
+ 27 .bss.FREQ     00000001  00803e04  00803e04  000002b6  2**0
+                  ALLOC
+ 28 .text.__dummy_fini 00000002  0000021a  0000021a  000002ae  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .text.__dummy_funcs_on_exit 00000002  0000021c  0000021c  000002b0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 30 .text.__dummy_simulator_exit 00000002  0000021e  0000021e  000002b2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .text.exit    0000000e  0000020a  0000020a  0000029e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 32 .text._Exit   00000002  00000220  00000220  000002b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	1c c0       	rjmp	.+56     	; 0x3a <__ctors_end>
+   2:	0a c1       	rjmp	.+532    	; 0x218 <__bad_interrupt>
+   4:	09 c1       	rjmp	.+530    	; 0x218 <__bad_interrupt>
+   6:	08 c1       	rjmp	.+528    	; 0x218 <__bad_interrupt>
+   8:	07 c1       	rjmp	.+526    	; 0x218 <__bad_interrupt>
+   a:	06 c1       	rjmp	.+524    	; 0x218 <__bad_interrupt>
+   c:	05 c1       	rjmp	.+522    	; 0x218 <__bad_interrupt>
+   e:	04 c1       	rjmp	.+520    	; 0x218 <__bad_interrupt>
+  10:	03 c1       	rjmp	.+518    	; 0x218 <__bad_interrupt>
+  12:	02 c1       	rjmp	.+516    	; 0x218 <__bad_interrupt>
+  14:	01 c1       	rjmp	.+514    	; 0x218 <__bad_interrupt>
+  16:	00 c1       	rjmp	.+512    	; 0x218 <__bad_interrupt>
+  18:	ff c0       	rjmp	.+510    	; 0x218 <__bad_interrupt>
+  1a:	fe c0       	rjmp	.+508    	; 0x218 <__bad_interrupt>
+  1c:	fd c0       	rjmp	.+506    	; 0x218 <__bad_interrupt>
+  1e:	fc c0       	rjmp	.+504    	; 0x218 <__bad_interrupt>
+  20:	fb c0       	rjmp	.+502    	; 0x218 <__bad_interrupt>
+  22:	fa c0       	rjmp	.+500    	; 0x218 <__bad_interrupt>
+  24:	f9 c0       	rjmp	.+498    	; 0x218 <__bad_interrupt>
+  26:	f8 c0       	rjmp	.+496    	; 0x218 <__bad_interrupt>
+  28:	f7 c0       	rjmp	.+494    	; 0x218 <__bad_interrupt>
+  2a:	f6 c0       	rjmp	.+492    	; 0x218 <__bad_interrupt>
+  2c:	f5 c0       	rjmp	.+490    	; 0x218 <__bad_interrupt>
+  2e:	f4 c0       	rjmp	.+488    	; 0x218 <__bad_interrupt>
+  30:	f3 c0       	rjmp	.+486    	; 0x218 <__bad_interrupt>
+  32:	f2 c0       	rjmp	.+484    	; 0x218 <__bad_interrupt>
+
+00000034 <.dinit>:
+  34:	3e 00       	.word	0x003e	; ????
+  36:	3e 05       	cpc	r19, r14
+  38:	80 00       	.word	0x0080	; ????
+
+0000003a <__ctors_end>:
+  3a:	11 24       	eor	r1, r1
+  3c:	1f be       	out	0x3f, r1	; 63
+  3e:	cf ef       	ldi	r28, 0xFF	; 255
+  40:	cd bf       	out	0x3d, r28	; 61
+  42:	df e3       	ldi	r29, 0x3F	; 63
+  44:	de bf       	out	0x3e, r29	; 62
+
+00000046 <__do_copy_data>:
+  46:	e4 e3       	ldi	r30, 0x34	; 52
+  48:	f0 e0       	ldi	r31, 0x00	; 0
+  4a:	40 e0       	ldi	r20, 0x00	; 0
+  4c:	17 c0       	rjmp	.+46     	; 0x7c <__do_clear_bss+0x8>
+  4e:	b5 91       	lpm	r27, Z+
+  50:	a5 91       	lpm	r26, Z+
+  52:	35 91       	lpm	r19, Z+
+  54:	25 91       	lpm	r18, Z+
+  56:	05 91       	lpm	r16, Z+
+  58:	07 fd       	sbrc	r16, 7
+  5a:	0c c0       	rjmp	.+24     	; 0x74 <__do_clear_bss>
+  5c:	95 91       	lpm	r25, Z+
+  5e:	85 91       	lpm	r24, Z+
+  60:	ef 01       	movw	r28, r30
+  62:	f9 2f       	mov	r31, r25
+  64:	e8 2f       	mov	r30, r24
+  66:	05 90       	lpm	r0, Z+
+  68:	0d 92       	st	X+, r0
+  6a:	a2 17       	cp	r26, r18
+  6c:	b3 07       	cpc	r27, r19
+  6e:	d9 f7       	brne	.-10     	; 0x66 <__do_copy_data+0x20>
+  70:	fe 01       	movw	r30, r28
+  72:	04 c0       	rjmp	.+8      	; 0x7c <__do_clear_bss+0x8>
+
+00000074 <__do_clear_bss>:
+  74:	1d 92       	st	X+, r1
+  76:	a2 17       	cp	r26, r18
+  78:	b3 07       	cpc	r27, r19
+  7a:	e1 f7       	brne	.-8      	; 0x74 <__do_clear_bss>
+  7c:	e9 33       	cpi	r30, 0x39	; 57
+  7e:	f4 07       	cpc	r31, r20
+  80:	31 f7       	brne	.-52     	; 0x4e <__do_copy_data+0x8>
+  82:	54 d0       	rcall	.+168    	; 0x12c <main>
+  84:	c2 c0       	rjmp	.+388    	; 0x20a <exit>
+
+00000086 <_exit>:
+  86:	f8 94       	cli
+
+00000088 <__stop_program>:
+  88:	ff cf       	rjmp	.-2      	; 0x88 <__stop_program>
+
+Disassembly of section .text:
+
+00000218 <__bad_interrupt>:
+ 218:	f3 ce       	rjmp	.-538    	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.TM_sendByte:
+
+0000008a <TM_sendByte>:
+	 TCA0.SINGLE.CTRLA &~ TCA_SINGLE_ENABLE_bm ; // counter disable
+ }
+ void sound_enable(){
+	 PORTB.OUTSET = LED;
+	 enable = 1;
+	 TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
+  8a:	20 e0       	ldi	r18, 0x00	; 0
+  8c:	30 e0       	ldi	r19, 0x00	; 0
+  8e:	19 c0       	rjmp	.+50     	; 0xc2 <TM_sendByte+0x38>
+  90:	98 e0       	ldi	r25, 0x08	; 8
+  92:	90 93 26 04 	sts	0x0426, r25	; 0x800426 <__RODATA_PM_OFFSET__+0x7f8426>
+  96:	48 2f       	mov	r20, r24
+  98:	50 e0       	ldi	r21, 0x00	; 0
+  9a:	02 2e       	mov	r0, r18
+  9c:	02 c0       	rjmp	.+4      	; 0xa2 <TM_sendByte+0x18>
+  9e:	55 95       	asr	r21
+  a0:	47 95       	ror	r20
+  a2:	0a 94       	dec	r0
+  a4:	e2 f7       	brpl	.-8      	; 0x9e <TM_sendByte+0x14>
+  a6:	40 ff       	sbrs	r20, 0
+  a8:	04 c0       	rjmp	.+8      	; 0xb2 <TM_sendByte+0x28>
+  aa:	94 e0       	ldi	r25, 0x04	; 4
+  ac:	90 93 25 04 	sts	0x0425, r25	; 0x800425 <__RODATA_PM_OFFSET__+0x7f8425>
+  b0:	03 c0       	rjmp	.+6      	; 0xb8 <TM_sendByte+0x2e>
+  b2:	94 e0       	ldi	r25, 0x04	; 4
+  b4:	90 93 26 04 	sts	0x0426, r25	; 0x800426 <__RODATA_PM_OFFSET__+0x7f8426>
+  b8:	98 e0       	ldi	r25, 0x08	; 8
+  ba:	90 93 25 04 	sts	0x0425, r25	; 0x800425 <__RODATA_PM_OFFSET__+0x7f8425>
+  be:	2f 5f       	subi	r18, 0xFF	; 255
+  c0:	3f 4f       	sbci	r19, 0xFF	; 255
+  c2:	28 30       	cpi	r18, 0x08	; 8
+  c4:	31 05       	cpc	r19, r1
+  c6:	24 f3       	brlt	.-56     	; 0x90 <TM_sendByte+0x6>
+  c8:	e0 e2       	ldi	r30, 0x20	; 32
+  ca:	f4 e0       	ldi	r31, 0x04	; 4
+  cc:	88 e0       	ldi	r24, 0x08	; 8
+  ce:	86 83       	std	Z+6, r24	; 0x06
+  d0:	94 e0       	ldi	r25, 0x04	; 4
+  d2:	92 83       	std	Z+2, r25	; 0x02
+  d4:	85 83       	std	Z+5, r24	; 0x05
+  d6:	a3 ec       	ldi	r26, 0xC3	; 195
+  d8:	b9 e0       	ldi	r27, 0x09	; 9
+  da:	11 97       	sbiw	r26, 0x01	; 1
+  dc:	f1 f7       	brne	.-4      	; 0xda <TM_sendByte+0x50>
+  de:	00 c0       	rjmp	.+0      	; 0xe0 <TM_sendByte+0x56>
+  e0:	00 00       	nop
+  e2:	86 83       	std	Z+6, r24	; 0x06
+  e4:	91 83       	std	Z+1, r25	; 0x01
+  e6:	08 95       	ret
+
+Disassembly of section .text.TM_start:
+
+000001c2 <TM_start>:
+	PORTB.OUTCLR = CLK;
+	PORTB.DIRSET = DIO; // Back to Output
+}
+
+void TM_start(void){
+	PORTB.OUTSET = CLK | DIO;
+ 1c2:	e0 e2       	ldi	r30, 0x20	; 32
+ 1c4:	f4 e0       	ldi	r31, 0x04	; 4
+ 1c6:	8c e0       	ldi	r24, 0x0C	; 12
+ 1c8:	85 83       	std	Z+5, r24	; 0x05
+	PORTB.OUTCLR = DIO;
+ 1ca:	84 e0       	ldi	r24, 0x04	; 4
+ 1cc:	86 83       	std	Z+6, r24	; 0x06
+	PORTB.OUTCLR = CLK;
+ 1ce:	88 e0       	ldi	r24, 0x08	; 8
+ 1d0:	86 83       	std	Z+6, r24	; 0x06
+ 1d2:	08 95       	ret
+
+Disassembly of section .text.TM_stop:
+
+000001d4 <TM_stop>:
+}
+
+void TM_stop(void){
+	PORTB.OUTCLR = CLK;
+ 1d4:	e0 e2       	ldi	r30, 0x20	; 32
+ 1d6:	f4 e0       	ldi	r31, 0x04	; 4
+ 1d8:	98 e0       	ldi	r25, 0x08	; 8
+ 1da:	96 83       	std	Z+6, r25	; 0x06
+	PORTB.OUTCLR = DIO;
+ 1dc:	84 e0       	ldi	r24, 0x04	; 4
+ 1de:	86 83       	std	Z+6, r24	; 0x06
+	PORTB.OUTSET = CLK;
+ 1e0:	95 83       	std	Z+5, r25	; 0x05
+	PORTB.OUTSET = DIO;
+ 1e2:	85 83       	std	Z+5, r24	; 0x05
+ 1e4:	08 95       	ret
+
+Disassembly of section .text.TM_displayInit:
+
+000001e6 <TM_displayInit>:
+}
+void TM_displayInit(void){
+	TM_start();
+ 1e6:	ed df       	rcall	.-38     	; 0x1c2 <TM_start>
+	TM_sendByte(0x40);  // auto increment
+ 1e8:	80 e4       	ldi	r24, 0x40	; 64
+ 1ea:	4f df       	rcall	.-354    	; 0x8a <__data_load_end>
+	TM_stop();
+ 1ec:	f3 df       	rcall	.-26     	; 0x1d4 <TM_stop>
+
+	TM_start();
+ 1ee:	e9 df       	rcall	.-46     	; 0x1c2 <TM_start>
+	TM_sendByte(0x88 | 0x07); // display ON, max brightness
+ 1f0:	8f e8       	ldi	r24, 0x8F	; 143
+ 1f2:	4b df       	rcall	.-362    	; 0x8a <__data_load_end>
+	TM_stop();
+ 1f4:	ef df       	rcall	.-34     	; 0x1d4 <TM_stop>
+ 1f6:	08 95       	ret
+
+Disassembly of section .text.setup:
+
+000000e8 <setup>:
+	 TCA0.SINGLE.CTRLA &~ TCA_SINGLE_ENABLE_bm ; // counter disable
+ }
+ void sound_enable(){
+	 PORTB.OUTSET = LED;
+	 enable = 1;
+	 TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
+  e8:	88 ed       	ldi	r24, 0xD8	; 216
+  ea:	84 bf       	out	0x34, r24	; 52
+  ec:	21 e0       	ldi	r18, 0x01	; 1
+  ee:	20 93 61 00 	sts	0x0061, r18	; 0x800061 <__RODATA_PM_OFFSET__+0x7f8061>
+  f2:	e0 e2       	ldi	r30, 0x20	; 32
+  f4:	f4 e0       	ldi	r31, 0x04	; 4
+  f6:	94 e0       	ldi	r25, 0x04	; 4
+  f8:	91 83       	std	Z+1, r25	; 0x01
+  fa:	88 e0       	ldi	r24, 0x08	; 8
+  fc:	81 83       	std	Z+1, r24	; 0x01
+  fe:	21 83       	std	Z+1, r18	; 0x01
+ 100:	22 e0       	ldi	r18, 0x02	; 2
+ 102:	21 83       	std	Z+1, r18	; 0x01
+ 104:	e0 e0       	ldi	r30, 0x00	; 0
+ 106:	f4 e0       	ldi	r31, 0x04	; 4
+ 108:	22 83       	std	Z+2, r18	; 0x02
+ 10a:	81 8b       	std	Z+17, r24	; 0x11
+ 10c:	92 83       	std	Z+2, r25	; 0x02
+ 10e:	82 8b       	std	Z+18, r24	; 0x12
+ 110:	82 83       	std	Z+2, r24	; 0x02
+ 112:	83 8b       	std	Z+19, r24	; 0x13
+ 114:	e0 e0       	ldi	r30, 0x00	; 0
+ 116:	fa e0       	ldi	r31, 0x0A	; 10
+ 118:	28 ee       	ldi	r18, 0xE8	; 232
+ 11a:	33 e0       	ldi	r19, 0x03	; 3
+ 11c:	26 a3       	std	Z+38, r18	; 0x26
+ 11e:	37 a3       	std	Z+39, r19	; 0x27
+ 120:	80 83       	st	Z, r24
+ 122:	80 81       	ld	r24, Z
+ 124:	81 60       	ori	r24, 0x01	; 1
+ 126:	80 83       	st	Z, r24
+ 128:	5e d0       	rcall	.+188    	; 0x1e6 <TM_displayInit>
+ 12a:	08 95       	ret
+
+Disassembly of section .text.set_frequency:
+
+000001f8 <set_frequency>:
+	
+	TM_displayInit();
+}
+
+void set_frequency(uint8_t fq){
+	TCA0.SINGLE.PER = 40 - fq;
+ 1f8:	28 e2       	ldi	r18, 0x28	; 40
+ 1fa:	30 e0       	ldi	r19, 0x00	; 0
+ 1fc:	28 1b       	sub	r18, r24
+ 1fe:	31 09       	sbc	r19, r1
+ 200:	20 93 26 0a 	sts	0x0A26, r18	; 0x800a26 <__RODATA_PM_OFFSET__+0x7f8a26>
+ 204:	30 93 27 0a 	sts	0x0A27, r19	; 0x800a27 <__RODATA_PM_OFFSET__+0x7f8a27>
+ 208:	08 95       	ret
+
+Disassembly of section .text.read_buttons:
+
+00000162 <read_buttons>:
+}
+ 
+ void read_buttons(void){
+	 
+	 b_next = 0;
+ 162:	10 92 03 3e 	sts	0x3E03, r1	; 0x803e03 <b_next>
+	 b_prev = 0;
+ 166:	10 92 02 3e 	sts	0x3E02, r1	; 0x803e02 <b_prev>
+	 b_play = 0;
+ 16a:	10 92 01 3e 	sts	0x3E01, r1	; 0x803e01 <b_play>
+
+	 uint8_t buttonreg = PORTA.IN;
+ 16e:	80 91 08 04 	lds	r24, 0x0408	; 0x800408 <__RODATA_PM_OFFSET__+0x7f8408>
+	 if (!(buttonreg && NXTB))
+ 172:	81 11       	cpse	r24, r1
+ 174:	03 c0       	rjmp	.+6      	; 0x17c <read_buttons+0x1a>
+	 {
+		 b_next = 1;
+ 176:	91 e0       	ldi	r25, 0x01	; 1
+ 178:	90 93 03 3e 	sts	0x3E03, r25	; 0x803e03 <b_next>
+	 }
+	 if (!(buttonreg && PREVB))
+ 17c:	81 11       	cpse	r24, r1
+ 17e:	03 c0       	rjmp	.+6      	; 0x186 <read_buttons+0x24>
+	 {
+		 b_prev = 1;
+ 180:	91 e0       	ldi	r25, 0x01	; 1
+ 182:	90 93 02 3e 	sts	0x3E02, r25	; 0x803e02 <b_prev>
+	 }
+	 if (!(buttonreg && PLAYB))
+ 186:	81 11       	cpse	r24, r1
+ 188:	03 c0       	rjmp	.+6      	; 0x190 <read_buttons+0x2e>
+	 {
+		 b_play = 1;
+ 18a:	81 e0       	ldi	r24, 0x01	; 1
+ 18c:	80 93 01 3e 	sts	0x3E01, r24	; 0x803e01 <b_play>
+ 190:	08 95       	ret
+
+Disassembly of section .text.select_frequency:
+
+00000192 <select_frequency>:
+	 }
+ }
+ 
+ void select_frequency(void){
+	 if (b_next)
+ 192:	80 91 03 3e 	lds	r24, 0x3E03	; 0x803e03 <b_next>
+ 196:	88 23       	and	r24, r24
+ 198:	29 f0       	breq	.+10     	; 0x1a4 <select_frequency+0x12>
+	 {
+		 FREQ++;
+ 19a:	80 91 04 3e 	lds	r24, 0x3E04	; 0x803e04 <FREQ>
+ 19e:	8f 5f       	subi	r24, 0xFF	; 255
+ 1a0:	80 93 04 3e 	sts	0x3E04, r24	; 0x803e04 <FREQ>
+	 }
+	 if (b_prev)
+ 1a4:	80 91 02 3e 	lds	r24, 0x3E02	; 0x803e02 <b_prev>
+ 1a8:	88 23       	and	r24, r24
+ 1aa:	39 f0       	breq	.+14     	; 0x1ba <select_frequency+0x28>
+	 {
+		 if (FREQ != 0)
+ 1ac:	80 91 04 3e 	lds	r24, 0x3E04	; 0x803e04 <FREQ>
+ 1b0:	88 23       	and	r24, r24
+ 1b2:	19 f0       	breq	.+6      	; 0x1ba <select_frequency+0x28>
+		 {
+			FREQ--; 
+ 1b4:	81 50       	subi	r24, 0x01	; 1
+ 1b6:	80 93 04 3e 	sts	0x3E04, r24	; 0x803e04 <FREQ>
+		 }
+	 }
+	 
+	 set_frequency(FREQ);
+ 1ba:	80 91 04 3e 	lds	r24, 0x3E04	; 0x803e04 <FREQ>
+ 1be:	1c d0       	rcall	.+56     	; 0x1f8 <set_frequency>
+ 1c0:	08 95       	ret
+
+Disassembly of section .text.main:
+
+0000012c <main>:
+	 TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
+ }
+  
+int main(void)
+{
+	setup();
+ 12c:	dd df       	rcall	.-70     	; 0xe8 <setup>
+    while(1)
+    {
+		
+        read_buttons();
+ 12e:	19 d0       	rcall	.+50     	; 0x162 <read_buttons>
+		select_frequency();
+ 130:	30 d0       	rcall	.+96     	; 0x192 <select_frequency>
+		if (b_play)
+ 132:	80 91 01 3e 	lds	r24, 0x3E01	; 0x803e01 <b_play>
+ 136:	88 23       	and	r24, r24
+ 138:	51 f0       	breq	.+20     	; 0x14e <main+0x22>
+		{
+			if (enable == 0)
+ 13a:	80 91 00 3e 	lds	r24, 0x3E00	; 0x803e00 <__DATA_REGION_ORIGIN__>
+ 13e:	81 11       	cpse	r24, r1
+ 140:	04 c0       	rjmp	.+8      	; 0x14a <main+0x1e>
+			{
+				enable = 1;
+ 142:	81 e0       	ldi	r24, 0x01	; 1
+ 144:	80 93 00 3e 	sts	0x3E00, r24	; 0x803e00 <__DATA_REGION_ORIGIN__>
+ 148:	02 c0       	rjmp	.+4      	; 0x14e <main+0x22>
+			}
+			else {
+				enable = 0;
+ 14a:	10 92 00 3e 	sts	0x3E00, r1	; 0x803e00 <__DATA_REGION_ORIGIN__>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 14e:	2f e7       	ldi	r18, 0x7F	; 127
+ 150:	8a e1       	ldi	r24, 0x1A	; 26
+ 152:	96 e0       	ldi	r25, 0x06	; 6
+ 154:	21 50       	subi	r18, 0x01	; 1
+ 156:	80 40       	sbci	r24, 0x00	; 0
+ 158:	90 40       	sbci	r25, 0x00	; 0
+ 15a:	e1 f7       	brne	.-8      	; 0x154 <main+0x28>
+ 15c:	00 c0       	rjmp	.+0      	; 0x15e <main+0x32>
+ 15e:	00 00       	nop
+ 160:	e6 cf       	rjmp	.-52     	; 0x12e <main+0x2>
+
+Disassembly of section .text.__dummy_fini:
+
+0000021a <_fini>:
+ 21a:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+0000021c <__funcs_on_exit>:
+ 21c:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+0000021e <__simulator_exit>:
+ 21e:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+0000020a <exit>:
+ 20a:	ec 01       	movw	r28, r24
+ 20c:	07 d0       	rcall	.+14     	; 0x21c <__funcs_on_exit>
+ 20e:	05 d0       	rcall	.+10     	; 0x21a <_fini>
+ 210:	ce 01       	movw	r24, r28
+ 212:	05 d0       	rcall	.+10     	; 0x21e <__simulator_exit>
+ 214:	ce 01       	movw	r24, r28
+ 216:	04 d0       	rcall	.+8      	; 0x220 <_Exit>
+
+Disassembly of section .text._Exit:
+
+00000220 <_Exit>:
+ 220:	32 df       	rcall	.-412    	; 0x86 <_exit>
