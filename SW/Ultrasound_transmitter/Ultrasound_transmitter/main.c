@@ -14,7 +14,7 @@
 //
 #define LED PIN1_bm // portB
 
-uint8_t FREQ = 0;	// KHZ to transmit
+uint16_t FREQ = 0;	// KHZ to transmit
 
  uint8_t b_next = 0;
  uint8_t b_prev = 0;
@@ -119,15 +119,19 @@ void setup(void){
 	PORTA.DIRCLR = PREVB; // to input
 	PORTA.PIN3CTRL = PORT_PULLUPEN_bm; // pullup on
 	
+
 	TCA0.SINGLE.PER = 1000; // number to count to
+	TCA0.SINGLE.CMP0 = 500;
+	TCA0.SINGLE.CTRLB = TCA_SINGLE_CMP0EN_bm | TCA_SINGLE_WGMODE_SINGLESLOPE_gc;
 	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV16_gc; // CLKDIV 16
 	TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
 	
 	TM_displayInit();
 }
 
-void set_frequency(uint8_t fq){
-	TCA0.SINGLE.PER = 40 - fq;
+void set_frequency(uint16_t fq){
+	TCA0.SINGLE.CMP0 = fq/2;
+	TCA0.SINGLE.PER = fq; // number to count to
 }
  
  void read_buttons(void){
@@ -137,15 +141,15 @@ void set_frequency(uint8_t fq){
 	 b_play = 0;
 
 	 uint8_t buttonreg = PORTA.IN;
-	 if (!(buttonreg && NXTB))
+	 if (!(buttonreg & NXTB))
 	 {
 		 b_next = 1;
 	 }
-	 if (!(buttonreg && PREVB))
+	 if (!(buttonreg & PREVB))
 	 {
 		 b_prev = 1;
 	 }
-	 if (!(buttonreg && PLAYB))
+	 if (!(buttonreg & PLAYB))
 	 {
 		 b_play = 1;
 	 }
@@ -154,13 +158,13 @@ void set_frequency(uint8_t fq){
  void select_frequency(void){
 	 if (b_next)
 	 {
-		 FREQ++;
+		 FREQ = FREQ+10;
 	 }
 	 if (b_prev)
 	 {
 		 if (FREQ != 0)
 		 {
-			FREQ--; 
+			FREQ = FREQ-10; 
 		 }
 	 }
 	 
@@ -170,17 +174,23 @@ void set_frequency(uint8_t fq){
  void sound_disable(void){
 	 PORTB.OUTCLR = LED;
 	 enable = 0;
-	 TCA0.SINGLE.CTRLA &~ TCA_SINGLE_ENABLE_bm ; // counter disable
+	 TCA0.SINGLE.CTRLA &= ~TCA_SINGLE_ENABLE_bm ; // counter disable
+	 TCA0.SINGLE.CTRLB &= ~TCA_SINGLE_CMP0EN_bm ;
+	 PORTB.OUTCLR=WO0;
  }
  void sound_enable(){
 	 PORTB.OUTSET = LED;
 	 enable = 1;
 	 TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
+	 TCA0.SINGLE.CTRLB |= TCA_SINGLE_CMP0EN_bm;
  }
   
 int main(void)
 {
 	setup();
+	sound_disable();
+	TM_printNumber(0000);
+	_delay_ms(1000);
     while(1)
     {
 		
@@ -191,12 +201,18 @@ int main(void)
 			if (enable == 0)
 			{
 				enable = 1;
+				sound_enable();
+				
 			}
 			else {
 				enable = 0;
+				sound_disable();
+				
 			}
+			
 		}
-		
+		TM_printNumber(FREQ);
+		set_frequency(FREQ);
 		_delay_ms(200);
     }
 }

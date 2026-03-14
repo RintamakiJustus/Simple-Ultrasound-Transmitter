@@ -3,106 +3,116 @@ Ultrasound_transmitter.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00803e00  00803e00  000002b6  2**0
+  0 .data         00000000  00803e00  00803e00  00000514  2**0
                   ALLOC, LOAD, DATA
-  1 .text         0000008a  00000000  00000000  00000094  2**1
+  1 .text         0000008a  00000000  00000000  000000d4  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      0000002f  00000000  00000000  000002b6  2**0
+  2 .comment      0000002f  00000000  00000000  00000514  2**0
                   CONTENTS, READONLY
-  3 .stack.descriptors.hdr 0000000e  00000000  00000000  000002e5  2**0
+  3 .stack.descriptors.hdr 0000001c  00000000  00000000  00000543  2**0
                   CONTENTS, READONLY
-  4 .debug_aranges 00000078  00000000  00000000  000002f3  2**0
+  4 .debug_aranges 00000078  00000000  00000000  0000055f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   000028f2  00000000  00000000  0000036b  2**0
+  5 .debug_info   00002a55  00000000  00000000  000005d7  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000016b5  00000000  00000000  00002c5d  2**0
+  6 .debug_abbrev 000016b5  00000000  00000000  0000302c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000054d  00000000  00000000  00004312  2**0
+  7 .debug_line   0000059f  00000000  00000000  000046e1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  000000ec  00000000  00000000  00004860  2**2
+  8 .debug_frame  000000ec  00000000  00000000  00004c80  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000973  00000000  00000000  0000494c  2**0
+  9 .debug_str    00000973  00000000  00000000  00004d6c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0000013a  00000000  00000000  000052bf  2**0
+ 10 .debug_loc    0000013a  00000000  00000000  000056df  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000068  00000000  00000000  000053f9  2**0
+ 11 .debug_ranges 00000068  00000000  00000000  00005819  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .text         00000002  00000218  00000218  000002ac  2**1
+ 12 .text         00000002  00000436  00000436  0000050a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00005464  2**2
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00005884  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .text.TM_sendByte 0000005e  0000008a  0000008a  0000011e  2**1
+ 14 .text.TM_sendByte 0000005e  00000254  00000254  00000328  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 15 .text.TM_start 00000012  000001c2  000001c2  00000256  2**1
+ 15 .text.TM_start 00000012  000003e8  000003e8  000004bc  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .text.TM_stop 00000012  000001d4  000001d4  00000268  2**1
+ 16 .text.TM_stop 00000012  000003fa  000003fa  000004ce  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 17 .text.TM_displayInit 00000012  000001e6  000001e6  0000027a  2**1
+ 17 .text.TM_displayInit 00000012  0000040c  0000040c  000004e0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 18 .text.setup   00000044  000000e8  000000e8  0000017c  2**1
+ 18 .text.TM_printNumber 00000162  0000008a  0000008a  0000015e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 19 .text.set_frequency 00000012  000001f8  000001f8  0000028c  2**1
+ 19 .text.setup   00000050  000002b2  000002b2  00000386  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 20 .text.read_buttons 00000030  00000162  00000162  000001f6  2**1
+ 20 .text.set_frequency 00000014  000003d4  000003d4  000004a8  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.select_frequency 00000030  00000192  00000192  00000226  2**1
+ 21 .text.read_buttons 00000030  00000346  00000346  0000041a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .text.main    00000036  0000012c  0000012c  000001c0  2**1
+ 22 .text.select_frequency 00000044  00000302  00000302  000003d6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 23 .bss.enable   00000001  00803e00  00803e00  000002b6  2**0
+ 23 .text.sound_disable 00000028  00000376  00000376  0000044a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.sound_enable 0000001e  0000039e  0000039e  00000472  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text.main    00000068  000001ec  000001ec  000002c0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .rodata.digitMap 0000000a  0080842c  0000042c  00000500  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 27 .bss.enable   00000001  00803e02  00803e02  00000514  2**0
                   ALLOC
- 24 .bss.b_play   00000001  00803e01  00803e01  000002b6  2**0
+ 28 .bss.b_play   00000001  00803e03  00803e03  00000514  2**0
                   ALLOC
- 25 .bss.b_prev   00000001  00803e02  00803e02  000002b6  2**0
+ 29 .bss.b_prev   00000001  00803e04  00803e04  00000514  2**0
                   ALLOC
- 26 .bss.b_next   00000001  00803e03  00803e03  000002b6  2**0
+ 30 .bss.b_next   00000001  00803e05  00803e05  00000514  2**0
                   ALLOC
- 27 .bss.FREQ     00000001  00803e04  00803e04  000002b6  2**0
+ 31 .bss.FREQ     00000002  00803e00  00803e00  00000514  2**0
                   ALLOC
- 28 .text.__dummy_fini 00000002  0000021a  0000021a  000002ae  2**1
+ 32 .text.libgcc.mul 00000018  000003bc  000003bc  00000490  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 29 .text.__dummy_funcs_on_exit 00000002  0000021c  0000021c  000002b0  2**1
+ 33 .text.__dummy_fini 00000002  00000438  00000438  0000050c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 30 .text.__dummy_simulator_exit 00000002  0000021e  0000021e  000002b2  2**1
+ 34 .text.__dummy_funcs_on_exit 00000002  0000043a  0000043a  0000050e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 31 .text.exit    0000000e  0000020a  0000020a  0000029e  2**1
+ 35 .text.__dummy_simulator_exit 00000002  0000043c  0000043c  00000510  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 32 .text._Exit   00000002  00000220  00000220  000002b4  2**1
+ 36 .text.exit    0000000e  0000041e  0000041e  000004f2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 37 .text._Exit   00000002  0000043e  0000043e  00000512  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	1c c0       	rjmp	.+56     	; 0x3a <__ctors_end>
-   2:	0a c1       	rjmp	.+532    	; 0x218 <__bad_interrupt>
-   4:	09 c1       	rjmp	.+530    	; 0x218 <__bad_interrupt>
-   6:	08 c1       	rjmp	.+528    	; 0x218 <__bad_interrupt>
-   8:	07 c1       	rjmp	.+526    	; 0x218 <__bad_interrupt>
-   a:	06 c1       	rjmp	.+524    	; 0x218 <__bad_interrupt>
-   c:	05 c1       	rjmp	.+522    	; 0x218 <__bad_interrupt>
-   e:	04 c1       	rjmp	.+520    	; 0x218 <__bad_interrupt>
-  10:	03 c1       	rjmp	.+518    	; 0x218 <__bad_interrupt>
-  12:	02 c1       	rjmp	.+516    	; 0x218 <__bad_interrupt>
-  14:	01 c1       	rjmp	.+514    	; 0x218 <__bad_interrupt>
-  16:	00 c1       	rjmp	.+512    	; 0x218 <__bad_interrupt>
-  18:	ff c0       	rjmp	.+510    	; 0x218 <__bad_interrupt>
-  1a:	fe c0       	rjmp	.+508    	; 0x218 <__bad_interrupt>
-  1c:	fd c0       	rjmp	.+506    	; 0x218 <__bad_interrupt>
-  1e:	fc c0       	rjmp	.+504    	; 0x218 <__bad_interrupt>
-  20:	fb c0       	rjmp	.+502    	; 0x218 <__bad_interrupt>
-  22:	fa c0       	rjmp	.+500    	; 0x218 <__bad_interrupt>
-  24:	f9 c0       	rjmp	.+498    	; 0x218 <__bad_interrupt>
-  26:	f8 c0       	rjmp	.+496    	; 0x218 <__bad_interrupt>
-  28:	f7 c0       	rjmp	.+494    	; 0x218 <__bad_interrupt>
-  2a:	f6 c0       	rjmp	.+492    	; 0x218 <__bad_interrupt>
-  2c:	f5 c0       	rjmp	.+490    	; 0x218 <__bad_interrupt>
-  2e:	f4 c0       	rjmp	.+488    	; 0x218 <__bad_interrupt>
-  30:	f3 c0       	rjmp	.+486    	; 0x218 <__bad_interrupt>
-  32:	f2 c0       	rjmp	.+484    	; 0x218 <__bad_interrupt>
+   2:	19 c2       	rjmp	.+1074   	; 0x436 <__bad_interrupt>
+   4:	18 c2       	rjmp	.+1072   	; 0x436 <__bad_interrupt>
+   6:	17 c2       	rjmp	.+1070   	; 0x436 <__bad_interrupt>
+   8:	16 c2       	rjmp	.+1068   	; 0x436 <__bad_interrupt>
+   a:	15 c2       	rjmp	.+1066   	; 0x436 <__bad_interrupt>
+   c:	14 c2       	rjmp	.+1064   	; 0x436 <__bad_interrupt>
+   e:	13 c2       	rjmp	.+1062   	; 0x436 <__bad_interrupt>
+  10:	12 c2       	rjmp	.+1060   	; 0x436 <__bad_interrupt>
+  12:	11 c2       	rjmp	.+1058   	; 0x436 <__bad_interrupt>
+  14:	10 c2       	rjmp	.+1056   	; 0x436 <__bad_interrupt>
+  16:	0f c2       	rjmp	.+1054   	; 0x436 <__bad_interrupt>
+  18:	0e c2       	rjmp	.+1052   	; 0x436 <__bad_interrupt>
+  1a:	0d c2       	rjmp	.+1050   	; 0x436 <__bad_interrupt>
+  1c:	0c c2       	rjmp	.+1048   	; 0x436 <__bad_interrupt>
+  1e:	0b c2       	rjmp	.+1046   	; 0x436 <__bad_interrupt>
+  20:	0a c2       	rjmp	.+1044   	; 0x436 <__bad_interrupt>
+  22:	09 c2       	rjmp	.+1042   	; 0x436 <__bad_interrupt>
+  24:	08 c2       	rjmp	.+1040   	; 0x436 <__bad_interrupt>
+  26:	07 c2       	rjmp	.+1038   	; 0x436 <__bad_interrupt>
+  28:	06 c2       	rjmp	.+1036   	; 0x436 <__bad_interrupt>
+  2a:	05 c2       	rjmp	.+1034   	; 0x436 <__bad_interrupt>
+  2c:	04 c2       	rjmp	.+1032   	; 0x436 <__bad_interrupt>
+  2e:	03 c2       	rjmp	.+1030   	; 0x436 <__bad_interrupt>
+  30:	02 c2       	rjmp	.+1028   	; 0x436 <__bad_interrupt>
+  32:	01 c2       	rjmp	.+1026   	; 0x436 <__bad_interrupt>
 
 00000034 <.dinit>:
   34:	3e 00       	.word	0x003e	; ????
-  36:	3e 05       	cpc	r19, r14
+  36:	3e 06       	cpc	r3, r30
   38:	80 00       	.word	0x0080	; ????
 
 0000003a <__ctors_end>:
@@ -146,8 +156,8 @@ Disassembly of section .text:
   7c:	e9 33       	cpi	r30, 0x39	; 57
   7e:	f4 07       	cpc	r31, r20
   80:	31 f7       	brne	.-52     	; 0x4e <__do_copy_data+0x8>
-  82:	54 d0       	rcall	.+168    	; 0x12c <main>
-  84:	c2 c0       	rjmp	.+388    	; 0x20a <exit>
+  82:	b4 d0       	rcall	.+360    	; 0x1ec <main>
+  84:	cc c1       	rjmp	.+920    	; 0x41e <exit>
 
 00000086 <_exit>:
   86:	f8 94       	cli
@@ -157,343 +167,713 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-00000218 <__bad_interrupt>:
- 218:	f3 ce       	rjmp	.-538    	; 0x0 <__TEXT_REGION_ORIGIN__>
+00000436 <__bad_interrupt>:
+ 436:	e4 cd       	rjmp	.-1080   	; 0x0 <__vectors>
 
 Disassembly of section .text.TM_sendByte:
 
-0000008a <TM_sendByte>:
-	 TCA0.SINGLE.CTRLA &~ TCA_SINGLE_ENABLE_bm ; // counter disable
- }
- void sound_enable(){
-	 PORTB.OUTSET = LED;
-	 enable = 1;
-	 TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
-  8a:	20 e0       	ldi	r18, 0x00	; 0
-  8c:	30 e0       	ldi	r19, 0x00	; 0
-  8e:	19 c0       	rjmp	.+50     	; 0xc2 <TM_sendByte+0x38>
-  90:	98 e0       	ldi	r25, 0x08	; 8
-  92:	90 93 26 04 	sts	0x0426, r25	; 0x800426 <__RODATA_PM_OFFSET__+0x7f8426>
-  96:	48 2f       	mov	r20, r24
-  98:	50 e0       	ldi	r21, 0x00	; 0
-  9a:	02 2e       	mov	r0, r18
-  9c:	02 c0       	rjmp	.+4      	; 0xa2 <TM_sendByte+0x18>
-  9e:	55 95       	asr	r21
-  a0:	47 95       	ror	r20
-  a2:	0a 94       	dec	r0
-  a4:	e2 f7       	brpl	.-8      	; 0x9e <TM_sendByte+0x14>
-  a6:	40 ff       	sbrs	r20, 0
-  a8:	04 c0       	rjmp	.+8      	; 0xb2 <TM_sendByte+0x28>
-  aa:	94 e0       	ldi	r25, 0x04	; 4
-  ac:	90 93 25 04 	sts	0x0425, r25	; 0x800425 <__RODATA_PM_OFFSET__+0x7f8425>
-  b0:	03 c0       	rjmp	.+6      	; 0xb8 <TM_sendByte+0x2e>
-  b2:	94 e0       	ldi	r25, 0x04	; 4
-  b4:	90 93 26 04 	sts	0x0426, r25	; 0x800426 <__RODATA_PM_OFFSET__+0x7f8426>
-  b8:	98 e0       	ldi	r25, 0x08	; 8
-  ba:	90 93 25 04 	sts	0x0425, r25	; 0x800425 <__RODATA_PM_OFFSET__+0x7f8425>
-  be:	2f 5f       	subi	r18, 0xFF	; 255
-  c0:	3f 4f       	sbci	r19, 0xFF	; 255
-  c2:	28 30       	cpi	r18, 0x08	; 8
-  c4:	31 05       	cpc	r19, r1
-  c6:	24 f3       	brlt	.-56     	; 0x90 <TM_sendByte+0x6>
-  c8:	e0 e2       	ldi	r30, 0x20	; 32
-  ca:	f4 e0       	ldi	r31, 0x04	; 4
-  cc:	88 e0       	ldi	r24, 0x08	; 8
-  ce:	86 83       	std	Z+6, r24	; 0x06
-  d0:	94 e0       	ldi	r25, 0x04	; 4
-  d2:	92 83       	std	Z+2, r25	; 0x02
-  d4:	85 83       	std	Z+5, r24	; 0x05
-  d6:	a3 ec       	ldi	r26, 0xC3	; 195
-  d8:	b9 e0       	ldi	r27, 0x09	; 9
-  da:	11 97       	sbiw	r26, 0x01	; 1
-  dc:	f1 f7       	brne	.-4      	; 0xda <TM_sendByte+0x50>
-  de:	00 c0       	rjmp	.+0      	; 0xe0 <TM_sendByte+0x56>
-  e0:	00 00       	nop
-  e2:	86 83       	std	Z+6, r24	; 0x06
-  e4:	91 83       	std	Z+1, r25	; 0x01
-  e6:	08 95       	ret
+00000254 <TM_sendByte>:
+	0x7F, // 8
+	0x6F  // 9
+};
 
-Disassembly of section .text.TM_start:
-
-000001c2 <TM_start>:
-	PORTB.OUTCLR = CLK;
-	PORTB.DIRSET = DIO; // Back to Output
-}
-
-void TM_start(void){
-	PORTB.OUTSET = CLK | DIO;
- 1c2:	e0 e2       	ldi	r30, 0x20	; 32
- 1c4:	f4 e0       	ldi	r31, 0x04	; 4
- 1c6:	8c e0       	ldi	r24, 0x0C	; 12
- 1c8:	85 83       	std	Z+5, r24	; 0x05
-	PORTB.OUTCLR = DIO;
- 1ca:	84 e0       	ldi	r24, 0x04	; 4
- 1cc:	86 83       	std	Z+6, r24	; 0x06
-	PORTB.OUTCLR = CLK;
- 1ce:	88 e0       	ldi	r24, 0x08	; 8
- 1d0:	86 83       	std	Z+6, r24	; 0x06
- 1d2:	08 95       	ret
-
-Disassembly of section .text.TM_stop:
-
-000001d4 <TM_stop>:
-}
-
-void TM_stop(void){
-	PORTB.OUTCLR = CLK;
- 1d4:	e0 e2       	ldi	r30, 0x20	; 32
- 1d6:	f4 e0       	ldi	r31, 0x04	; 4
- 1d8:	98 e0       	ldi	r25, 0x08	; 8
- 1da:	96 83       	std	Z+6, r25	; 0x06
-	PORTB.OUTCLR = DIO;
- 1dc:	84 e0       	ldi	r24, 0x04	; 4
- 1de:	86 83       	std	Z+6, r24	; 0x06
-	PORTB.OUTSET = CLK;
- 1e0:	95 83       	std	Z+5, r25	; 0x05
-	PORTB.OUTSET = DIO;
- 1e2:	85 83       	std	Z+5, r24	; 0x05
- 1e4:	08 95       	ret
-
-Disassembly of section .text.TM_displayInit:
-
-000001e6 <TM_displayInit>:
-}
-void TM_displayInit(void){
-	TM_start();
- 1e6:	ed df       	rcall	.-38     	; 0x1c2 <TM_start>
-	TM_sendByte(0x40);  // auto increment
- 1e8:	80 e4       	ldi	r24, 0x40	; 64
- 1ea:	4f df       	rcall	.-354    	; 0x8a <__data_load_end>
-	TM_stop();
- 1ec:	f3 df       	rcall	.-26     	; 0x1d4 <TM_stop>
-
-	TM_start();
- 1ee:	e9 df       	rcall	.-46     	; 0x1c2 <TM_start>
-	TM_sendByte(0x88 | 0x07); // display ON, max brightness
- 1f0:	8f e8       	ldi	r24, 0x8F	; 143
- 1f2:	4b df       	rcall	.-362    	; 0x8a <__data_load_end>
-	TM_stop();
- 1f4:	ef df       	rcall	.-34     	; 0x1d4 <TM_stop>
- 1f6:	08 95       	ret
-
-Disassembly of section .text.setup:
-
-000000e8 <setup>:
-	 TCA0.SINGLE.CTRLA &~ TCA_SINGLE_ENABLE_bm ; // counter disable
- }
- void sound_enable(){
-	 PORTB.OUTSET = LED;
-	 enable = 1;
-	 TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
-  e8:	88 ed       	ldi	r24, 0xD8	; 216
-  ea:	84 bf       	out	0x34, r24	; 52
-  ec:	21 e0       	ldi	r18, 0x01	; 1
-  ee:	20 93 61 00 	sts	0x0061, r18	; 0x800061 <__RODATA_PM_OFFSET__+0x7f8061>
-  f2:	e0 e2       	ldi	r30, 0x20	; 32
-  f4:	f4 e0       	ldi	r31, 0x04	; 4
-  f6:	94 e0       	ldi	r25, 0x04	; 4
-  f8:	91 83       	std	Z+1, r25	; 0x01
-  fa:	88 e0       	ldi	r24, 0x08	; 8
-  fc:	81 83       	std	Z+1, r24	; 0x01
-  fe:	21 83       	std	Z+1, r18	; 0x01
- 100:	22 e0       	ldi	r18, 0x02	; 2
- 102:	21 83       	std	Z+1, r18	; 0x01
- 104:	e0 e0       	ldi	r30, 0x00	; 0
- 106:	f4 e0       	ldi	r31, 0x04	; 4
- 108:	22 83       	std	Z+2, r18	; 0x02
- 10a:	81 8b       	std	Z+17, r24	; 0x11
- 10c:	92 83       	std	Z+2, r25	; 0x02
- 10e:	82 8b       	std	Z+18, r24	; 0x12
- 110:	82 83       	std	Z+2, r24	; 0x02
- 112:	83 8b       	std	Z+19, r24	; 0x13
- 114:	e0 e0       	ldi	r30, 0x00	; 0
- 116:	fa e0       	ldi	r31, 0x0A	; 10
- 118:	28 ee       	ldi	r18, 0xE8	; 232
- 11a:	33 e0       	ldi	r19, 0x03	; 3
- 11c:	26 a3       	std	Z+38, r18	; 0x26
- 11e:	37 a3       	std	Z+39, r19	; 0x27
- 120:	80 83       	st	Z, r24
- 122:	80 81       	ld	r24, Z
- 124:	81 60       	ori	r24, 0x01	; 1
- 126:	80 83       	st	Z, r24
- 128:	5e d0       	rcall	.+188    	; 0x1e6 <TM_displayInit>
- 12a:	08 95       	ret
-
-Disassembly of section .text.set_frequency:
-
-000001f8 <set_frequency>:
-	
-	TM_displayInit();
-}
-
-void set_frequency(uint8_t fq){
-	TCA0.SINGLE.PER = 40 - fq;
- 1f8:	28 e2       	ldi	r18, 0x28	; 40
- 1fa:	30 e0       	ldi	r19, 0x00	; 0
- 1fc:	28 1b       	sub	r18, r24
- 1fe:	31 09       	sbc	r19, r1
- 200:	20 93 26 0a 	sts	0x0A26, r18	; 0x800a26 <__RODATA_PM_OFFSET__+0x7f8a26>
- 204:	30 93 27 0a 	sts	0x0A27, r19	; 0x800a27 <__RODATA_PM_OFFSET__+0x7f8a27>
- 208:	08 95       	ret
-
-Disassembly of section .text.read_buttons:
-
-00000162 <read_buttons>:
-}
- 
- void read_buttons(void){
-	 
-	 b_next = 0;
- 162:	10 92 03 3e 	sts	0x3E03, r1	; 0x803e03 <b_next>
-	 b_prev = 0;
- 166:	10 92 02 3e 	sts	0x3E02, r1	; 0x803e02 <b_prev>
-	 b_play = 0;
- 16a:	10 92 01 3e 	sts	0x3E01, r1	; 0x803e01 <b_play>
-
-	 uint8_t buttonreg = PORTA.IN;
- 16e:	80 91 08 04 	lds	r24, 0x0408	; 0x800408 <__RODATA_PM_OFFSET__+0x7f8408>
-	 if (!(buttonreg && NXTB))
- 172:	81 11       	cpse	r24, r1
- 174:	03 c0       	rjmp	.+6      	; 0x17c <read_buttons+0x1a>
-	 {
-		 b_next = 1;
- 176:	91 e0       	ldi	r25, 0x01	; 1
- 178:	90 93 03 3e 	sts	0x3E03, r25	; 0x803e03 <b_next>
-	 }
-	 if (!(buttonreg && PREVB))
- 17c:	81 11       	cpse	r24, r1
- 17e:	03 c0       	rjmp	.+6      	; 0x186 <read_buttons+0x24>
-	 {
-		 b_prev = 1;
- 180:	91 e0       	ldi	r25, 0x01	; 1
- 182:	90 93 02 3e 	sts	0x3E02, r25	; 0x803e02 <b_prev>
-	 }
-	 if (!(buttonreg && PLAYB))
- 186:	81 11       	cpse	r24, r1
- 188:	03 c0       	rjmp	.+6      	; 0x190 <read_buttons+0x2e>
-	 {
-		 b_play = 1;
- 18a:	81 e0       	ldi	r24, 0x01	; 1
- 18c:	80 93 01 3e 	sts	0x3E01, r24	; 0x803e01 <b_play>
- 190:	08 95       	ret
-
-Disassembly of section .text.select_frequency:
-
-00000192 <select_frequency>:
-	 }
- }
- 
- void select_frequency(void){
-	 if (b_next)
- 192:	80 91 03 3e 	lds	r24, 0x3E03	; 0x803e03 <b_next>
- 196:	88 23       	and	r24, r24
- 198:	29 f0       	breq	.+10     	; 0x1a4 <select_frequency+0x12>
-	 {
-		 FREQ++;
- 19a:	80 91 04 3e 	lds	r24, 0x3E04	; 0x803e04 <FREQ>
- 19e:	8f 5f       	subi	r24, 0xFF	; 255
- 1a0:	80 93 04 3e 	sts	0x3E04, r24	; 0x803e04 <FREQ>
-	 }
-	 if (b_prev)
- 1a4:	80 91 02 3e 	lds	r24, 0x3E02	; 0x803e02 <b_prev>
- 1a8:	88 23       	and	r24, r24
- 1aa:	39 f0       	breq	.+14     	; 0x1ba <select_frequency+0x28>
-	 {
-		 if (FREQ != 0)
- 1ac:	80 91 04 3e 	lds	r24, 0x3E04	; 0x803e04 <FREQ>
- 1b0:	88 23       	and	r24, r24
- 1b2:	19 f0       	breq	.+6      	; 0x1ba <select_frequency+0x28>
-		 {
-			FREQ--; 
- 1b4:	81 50       	subi	r24, 0x01	; 1
- 1b6:	80 93 04 3e 	sts	0x3E04, r24	; 0x803e04 <FREQ>
-		 }
-	 }
-	 
-	 set_frequency(FREQ);
- 1ba:	80 91 04 3e 	lds	r24, 0x3E04	; 0x803e04 <FREQ>
- 1be:	1c d0       	rcall	.+56     	; 0x1f8 <set_frequency>
- 1c0:	08 95       	ret
-
-Disassembly of section .text.main:
-
-0000012c <main>:
-	 TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
- }
-  
-int main(void)
-{
-	setup();
- 12c:	dd df       	rcall	.-70     	; 0xe8 <setup>
-    while(1)
-    {
+void TM_sendByte(uint8_t data){
+	for(int i = 0; i<8; i++){
+ 254:	20 e0       	ldi	r18, 0x00	; 0
+ 256:	30 e0       	ldi	r19, 0x00	; 0
+ 258:	19 c0       	rjmp	.+50     	; 0x28c <TM_sendByte+0x38>
 		
-        read_buttons();
- 12e:	19 d0       	rcall	.+50     	; 0x162 <read_buttons>
-		select_frequency();
- 130:	30 d0       	rcall	.+96     	; 0x192 <select_frequency>
-		if (b_play)
- 132:	80 91 01 3e 	lds	r24, 0x3E01	; 0x803e01 <b_play>
- 136:	88 23       	and	r24, r24
- 138:	51 f0       	breq	.+20     	; 0x14e <main+0x22>
+		PORTB.OUTCLR = CLK;
+ 25a:	98 e0       	ldi	r25, 0x08	; 8
+ 25c:	90 93 26 04 	sts	0x0426, r25	; 0x800426 <__RODATA_PM_OFFSET__+0x7f8426>
+		
+		if (data & (1<<i)) // if value at index (lsb first)
+ 260:	48 2f       	mov	r20, r24
+ 262:	50 e0       	ldi	r21, 0x00	; 0
+ 264:	02 2e       	mov	r0, r18
+ 266:	02 c0       	rjmp	.+4      	; 0x26c <TM_sendByte+0x18>
+ 268:	55 95       	asr	r21
+ 26a:	47 95       	ror	r20
+ 26c:	0a 94       	dec	r0
+ 26e:	e2 f7       	brpl	.-8      	; 0x268 <TM_sendByte+0x14>
+ 270:	40 ff       	sbrs	r20, 0
+ 272:	04 c0       	rjmp	.+8      	; 0x27c <TM_sendByte+0x28>
 		{
-			if (enable == 0)
- 13a:	80 91 00 3e 	lds	r24, 0x3E00	; 0x803e00 <__DATA_REGION_ORIGIN__>
- 13e:	81 11       	cpse	r24, r1
- 140:	04 c0       	rjmp	.+8      	; 0x14a <main+0x1e>
-			{
-				enable = 1;
- 142:	81 e0       	ldi	r24, 0x01	; 1
- 144:	80 93 00 3e 	sts	0x3E00, r24	; 0x803e00 <__DATA_REGION_ORIGIN__>
- 148:	02 c0       	rjmp	.+4      	; 0x14e <main+0x22>
-			}
-			else {
-				enable = 0;
- 14a:	10 92 00 3e 	sts	0x3E00, r1	; 0x803e00 <__DATA_REGION_ORIGIN__>
+			PORTB.OUTSET = DIO;
+ 274:	94 e0       	ldi	r25, 0x04	; 4
+ 276:	90 93 25 04 	sts	0x0425, r25	; 0x800425 <__RODATA_PM_OFFSET__+0x7f8425>
+ 27a:	03 c0       	rjmp	.+6      	; 0x282 <TM_sendByte+0x2e>
+		}
+		else {
+			PORTB.OUTCLR = DIO;
+ 27c:	94 e0       	ldi	r25, 0x04	; 4
+ 27e:	90 93 26 04 	sts	0x0426, r25	; 0x800426 <__RODATA_PM_OFFSET__+0x7f8426>
+		}
+		
+		PORTB.OUTSET = CLK;
+ 282:	98 e0       	ldi	r25, 0x08	; 8
+ 284:	90 93 25 04 	sts	0x0425, r25	; 0x800425 <__RODATA_PM_OFFSET__+0x7f8425>
+	0x7F, // 8
+	0x6F  // 9
+};
+
+void TM_sendByte(uint8_t data){
+	for(int i = 0; i<8; i++){
+ 288:	2f 5f       	subi	r18, 0xFF	; 255
+ 28a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 28c:	28 30       	cpi	r18, 0x08	; 8
+ 28e:	31 05       	cpc	r19, r1
+ 290:	24 f3       	brlt	.-56     	; 0x25a <TM_sendByte+0x6>
+		
+		PORTB.OUTSET = CLK;
+	}
+	
+	// WAIT FOR ACK
+	PORTB.OUTCLR = CLK;
+ 292:	e0 e2       	ldi	r30, 0x20	; 32
+ 294:	f4 e0       	ldi	r31, 0x04	; 4
+ 296:	88 e0       	ldi	r24, 0x08	; 8
+ 298:	86 83       	std	Z+6, r24	; 0x06
+	PORTB.DIRCLR = DIO; // To input
+ 29a:	94 e0       	ldi	r25, 0x04	; 4
+ 29c:	92 83       	std	Z+2, r25	; 0x02
+	PORTB.OUTSET = CLK;
+ 29e:	85 83       	std	Z+5, r24	; 0x05
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 14e:	2f e7       	ldi	r18, 0x7F	; 127
- 150:	8a e1       	ldi	r24, 0x1A	; 26
- 152:	96 e0       	ldi	r25, 0x06	; 6
- 154:	21 50       	subi	r18, 0x01	; 1
- 156:	80 40       	sbci	r24, 0x00	; 0
- 158:	90 40       	sbci	r25, 0x00	; 0
- 15a:	e1 f7       	brne	.-8      	; 0x154 <main+0x28>
- 15c:	00 c0       	rjmp	.+0      	; 0x15e <main+0x32>
- 15e:	00 00       	nop
- 160:	e6 cf       	rjmp	.-52     	; 0x12e <main+0x2>
+ 2a0:	a3 ec       	ldi	r26, 0xC3	; 195
+ 2a2:	b9 e0       	ldi	r27, 0x09	; 9
+ 2a4:	11 97       	sbiw	r26, 0x01	; 1
+ 2a6:	f1 f7       	brne	.-4      	; 0x2a4 <TM_sendByte+0x50>
+ 2a8:	00 c0       	rjmp	.+0      	; 0x2aa <TM_sendByte+0x56>
+ 2aa:	00 00       	nop
+	_delay_ms(1);
+	PORTB.OUTCLR = CLK;
+ 2ac:	86 83       	std	Z+6, r24	; 0x06
+	PORTB.DIRSET = DIO; // Back to Output
+ 2ae:	91 83       	std	Z+1, r25	; 0x01
+ 2b0:	08 95       	ret
+
+Disassembly of section .text.TM_start:
+
+000003e8 <TM_start>:
+}
+
+void TM_start(void){
+	PORTB.OUTSET = CLK | DIO;
+ 3e8:	e0 e2       	ldi	r30, 0x20	; 32
+ 3ea:	f4 e0       	ldi	r31, 0x04	; 4
+ 3ec:	8c e0       	ldi	r24, 0x0C	; 12
+ 3ee:	85 83       	std	Z+5, r24	; 0x05
+	PORTB.OUTCLR = DIO;
+ 3f0:	84 e0       	ldi	r24, 0x04	; 4
+ 3f2:	86 83       	std	Z+6, r24	; 0x06
+	PORTB.OUTCLR = CLK;
+ 3f4:	88 e0       	ldi	r24, 0x08	; 8
+ 3f6:	86 83       	std	Z+6, r24	; 0x06
+ 3f8:	08 95       	ret
+
+Disassembly of section .text.TM_stop:
+
+000003fa <TM_stop>:
+}
+
+void TM_stop(void){
+	PORTB.OUTCLR = CLK;
+ 3fa:	e0 e2       	ldi	r30, 0x20	; 32
+ 3fc:	f4 e0       	ldi	r31, 0x04	; 4
+ 3fe:	98 e0       	ldi	r25, 0x08	; 8
+ 400:	96 83       	std	Z+6, r25	; 0x06
+	PORTB.OUTCLR = DIO;
+ 402:	84 e0       	ldi	r24, 0x04	; 4
+ 404:	86 83       	std	Z+6, r24	; 0x06
+	PORTB.OUTSET = CLK;
+ 406:	95 83       	std	Z+5, r25	; 0x05
+	PORTB.OUTSET = DIO;
+ 408:	85 83       	std	Z+5, r24	; 0x05
+ 40a:	08 95       	ret
+
+Disassembly of section .text.TM_displayInit:
+
+0000040c <TM_displayInit>:
+}
+void TM_displayInit(void){
+	TM_start();
+ 40c:	ed df       	rcall	.-38     	; 0x3e8 <TM_start>
+	TM_sendByte(0x40);  // auto increment
+ 40e:	80 e4       	ldi	r24, 0x40	; 64
+ 410:	21 df       	rcall	.-446    	; 0x254 <TM_sendByte>
+	TM_stop();
+ 412:	f3 df       	rcall	.-26     	; 0x3fa <TM_stop>
+
+	TM_start();
+ 414:	e9 df       	rcall	.-46     	; 0x3e8 <TM_start>
+	TM_sendByte(0x88 | 0x07); // display ON, max brightness
+ 416:	8f e8       	ldi	r24, 0x8F	; 143
+ 418:	1d df       	rcall	.-454    	; 0x254 <TM_sendByte>
+	TM_stop();
+ 41a:	ef df       	rcall	.-34     	; 0x3fa <TM_stop>
+ 41c:	08 95       	ret
+
+Disassembly of section .text.TM_printNumber:
+
+0000008a <TM_printNumber>:
+}
+
+void TM_printNumber(uint16_t num)
+{
+  8a:	1f 93       	push	r17
+  8c:	cf 93       	push	r28
+  8e:	df 93       	push	r29
+  90:	00 d0       	rcall	.+0      	; 0x92 <TM_printNumber+0x8>
+  92:	00 d0       	rcall	.+0      	; 0x94 <TM_printNumber+0xa>
+  94:	cd b7       	in	r28, 0x3d	; 61
+  96:	de b7       	in	r29, 0x3e	; 62
+  98:	ac 01       	movw	r20, r24
+	uint8_t digits[4];
+
+	if (num > 9999) num = 9999;
+  9a:	80 31       	cpi	r24, 0x10	; 16
+  9c:	97 42       	sbci	r25, 0x27	; 39
+  9e:	10 f0       	brcs	.+4      	; 0xa4 <TM_printNumber+0x1a>
+  a0:	4f e0       	ldi	r20, 0x0F	; 15
+  a2:	57 e2       	ldi	r21, 0x27	; 39
+
+	digits[0] = digitMap[(num / 1000) % 10];
+  a4:	9a 01       	movw	r18, r20
+  a6:	36 95       	lsr	r19
+  a8:	27 95       	ror	r18
+  aa:	36 95       	lsr	r19
+  ac:	27 95       	ror	r18
+  ae:	36 95       	lsr	r19
+  b0:	27 95       	ror	r18
+  b2:	a5 ec       	ldi	r26, 0xC5	; 197
+  b4:	b0 e2       	ldi	r27, 0x20	; 32
+  b6:	82 d1       	rcall	.+772    	; 0x3bc <__umulhisi3>
+  b8:	fc 01       	movw	r30, r24
+  ba:	f2 95       	swap	r31
+  bc:	e2 95       	swap	r30
+  be:	ef 70       	andi	r30, 0x0F	; 15
+  c0:	ef 27       	eor	r30, r31
+  c2:	ff 70       	andi	r31, 0x0F	; 15
+  c4:	ef 27       	eor	r30, r31
+  c6:	9f 01       	movw	r18, r30
+  c8:	ad ec       	ldi	r26, 0xCD	; 205
+  ca:	bc ec       	ldi	r27, 0xCC	; 204
+  cc:	77 d1       	rcall	.+750    	; 0x3bc <__umulhisi3>
+  ce:	96 95       	lsr	r25
+  d0:	87 95       	ror	r24
+  d2:	96 95       	lsr	r25
+  d4:	87 95       	ror	r24
+  d6:	96 95       	lsr	r25
+  d8:	87 95       	ror	r24
+  da:	9c 01       	movw	r18, r24
+  dc:	22 0f       	add	r18, r18
+  de:	33 1f       	adc	r19, r19
+  e0:	88 0f       	add	r24, r24
+  e2:	99 1f       	adc	r25, r25
+  e4:	88 0f       	add	r24, r24
+  e6:	99 1f       	adc	r25, r25
+  e8:	88 0f       	add	r24, r24
+  ea:	99 1f       	adc	r25, r25
+  ec:	82 0f       	add	r24, r18
+  ee:	93 1f       	adc	r25, r19
+  f0:	9f 01       	movw	r18, r30
+  f2:	28 1b       	sub	r18, r24
+  f4:	39 0b       	sbc	r19, r25
+  f6:	f9 01       	movw	r30, r18
+  f8:	e4 5d       	subi	r30, 0xD4	; 212
+  fa:	fb 47       	sbci	r31, 0x7B	; 123
+  fc:	80 81       	ld	r24, Z
+  fe:	89 83       	std	Y+1, r24	; 0x01
+	digits[1] = digitMap[(num / 100)  % 10];
+ 100:	9a 01       	movw	r18, r20
+ 102:	36 95       	lsr	r19
+ 104:	27 95       	ror	r18
+ 106:	36 95       	lsr	r19
+ 108:	27 95       	ror	r18
+ 10a:	ab e7       	ldi	r26, 0x7B	; 123
+ 10c:	b4 e1       	ldi	r27, 0x14	; 20
+ 10e:	56 d1       	rcall	.+684    	; 0x3bc <__umulhisi3>
+ 110:	fc 01       	movw	r30, r24
+ 112:	f6 95       	lsr	r31
+ 114:	e7 95       	ror	r30
+ 116:	9f 01       	movw	r18, r30
+ 118:	ad ec       	ldi	r26, 0xCD	; 205
+ 11a:	bc ec       	ldi	r27, 0xCC	; 204
+ 11c:	4f d1       	rcall	.+670    	; 0x3bc <__umulhisi3>
+ 11e:	96 95       	lsr	r25
+ 120:	87 95       	ror	r24
+ 122:	96 95       	lsr	r25
+ 124:	87 95       	ror	r24
+ 126:	96 95       	lsr	r25
+ 128:	87 95       	ror	r24
+ 12a:	9c 01       	movw	r18, r24
+ 12c:	22 0f       	add	r18, r18
+ 12e:	33 1f       	adc	r19, r19
+ 130:	88 0f       	add	r24, r24
+ 132:	99 1f       	adc	r25, r25
+ 134:	88 0f       	add	r24, r24
+ 136:	99 1f       	adc	r25, r25
+ 138:	88 0f       	add	r24, r24
+ 13a:	99 1f       	adc	r25, r25
+ 13c:	82 0f       	add	r24, r18
+ 13e:	93 1f       	adc	r25, r19
+ 140:	9f 01       	movw	r18, r30
+ 142:	28 1b       	sub	r18, r24
+ 144:	39 0b       	sbc	r19, r25
+ 146:	f9 01       	movw	r30, r18
+ 148:	e4 5d       	subi	r30, 0xD4	; 212
+ 14a:	fb 47       	sbci	r31, 0x7B	; 123
+ 14c:	80 81       	ld	r24, Z
+ 14e:	8a 83       	std	Y+2, r24	; 0x02
+	digits[2] = digitMap[(num / 10)   % 10];
+ 150:	9a 01       	movw	r18, r20
+ 152:	34 d1       	rcall	.+616    	; 0x3bc <__umulhisi3>
+ 154:	fc 01       	movw	r30, r24
+ 156:	f6 95       	lsr	r31
+ 158:	e7 95       	ror	r30
+ 15a:	f6 95       	lsr	r31
+ 15c:	e7 95       	ror	r30
+ 15e:	f6 95       	lsr	r31
+ 160:	e7 95       	ror	r30
+ 162:	9f 01       	movw	r18, r30
+ 164:	2b d1       	rcall	.+598    	; 0x3bc <__umulhisi3>
+ 166:	96 95       	lsr	r25
+ 168:	87 95       	ror	r24
+ 16a:	96 95       	lsr	r25
+ 16c:	87 95       	ror	r24
+ 16e:	96 95       	lsr	r25
+ 170:	87 95       	ror	r24
+ 172:	9c 01       	movw	r18, r24
+ 174:	22 0f       	add	r18, r18
+ 176:	33 1f       	adc	r19, r19
+ 178:	88 0f       	add	r24, r24
+ 17a:	99 1f       	adc	r25, r25
+ 17c:	88 0f       	add	r24, r24
+ 17e:	99 1f       	adc	r25, r25
+ 180:	88 0f       	add	r24, r24
+ 182:	99 1f       	adc	r25, r25
+ 184:	82 0f       	add	r24, r18
+ 186:	93 1f       	adc	r25, r19
+ 188:	9f 01       	movw	r18, r30
+ 18a:	28 1b       	sub	r18, r24
+ 18c:	39 0b       	sbc	r19, r25
+ 18e:	d9 01       	movw	r26, r18
+ 190:	a4 5d       	subi	r26, 0xD4	; 212
+ 192:	bb 47       	sbci	r27, 0x7B	; 123
+ 194:	8c 91       	ld	r24, X
+ 196:	8b 83       	std	Y+3, r24	; 0x03
+	digits[3] = digitMap[num % 10];
+ 198:	cf 01       	movw	r24, r30
+ 19a:	88 0f       	add	r24, r24
+ 19c:	99 1f       	adc	r25, r25
+ 19e:	ee 0f       	add	r30, r30
+ 1a0:	ff 1f       	adc	r31, r31
+ 1a2:	ee 0f       	add	r30, r30
+ 1a4:	ff 1f       	adc	r31, r31
+ 1a6:	ee 0f       	add	r30, r30
+ 1a8:	ff 1f       	adc	r31, r31
+ 1aa:	e8 0f       	add	r30, r24
+ 1ac:	f9 1f       	adc	r31, r25
+ 1ae:	4e 1b       	sub	r20, r30
+ 1b0:	5f 0b       	sbc	r21, r31
+ 1b2:	fa 01       	movw	r30, r20
+ 1b4:	e4 5d       	subi	r30, 0xD4	; 212
+ 1b6:	fb 47       	sbci	r31, 0x7B	; 123
+ 1b8:	80 81       	ld	r24, Z
+ 1ba:	8c 83       	std	Y+4, r24	; 0x04
+
+	TM_start();
+ 1bc:	15 d1       	rcall	.+554    	; 0x3e8 <TM_start>
+	TM_sendByte(0xC0);      // Start form 0
+ 1be:	80 ec       	ldi	r24, 0xC0	; 192
+ 1c0:	49 d0       	rcall	.+146    	; 0x254 <TM_sendByte>
+	for (uint8_t i = 0; i < 4; i++)
+ 1c2:	10 e0       	ldi	r17, 0x00	; 0
+ 1c4:	09 c0       	rjmp	.+18     	; 0x1d8 <TM_printNumber+0x14e>
+	TM_sendByte(digits[i]);
+ 1c6:	e1 e0       	ldi	r30, 0x01	; 1
+ 1c8:	f0 e0       	ldi	r31, 0x00	; 0
+ 1ca:	ec 0f       	add	r30, r28
+ 1cc:	fd 1f       	adc	r31, r29
+ 1ce:	e1 0f       	add	r30, r17
+ 1d0:	f1 1d       	adc	r31, r1
+ 1d2:	80 81       	ld	r24, Z
+ 1d4:	3f d0       	rcall	.+126    	; 0x254 <TM_sendByte>
+	digits[2] = digitMap[(num / 10)   % 10];
+	digits[3] = digitMap[num % 10];
+
+	TM_start();
+	TM_sendByte(0xC0);      // Start form 0
+	for (uint8_t i = 0; i < 4; i++)
+ 1d6:	1f 5f       	subi	r17, 0xFF	; 255
+ 1d8:	14 30       	cpi	r17, 0x04	; 4
+ 1da:	a8 f3       	brcs	.-22     	; 0x1c6 <TM_printNumber+0x13c>
+	TM_sendByte(digits[i]);
+	TM_stop();
+ 1dc:	0e d1       	rcall	.+540    	; 0x3fa <TM_stop>
+	
+}
+ 1de:	24 96       	adiw	r28, 0x04	; 4
+ 1e0:	cd bf       	out	0x3d, r28	; 61
+ 1e2:	de bf       	out	0x3e, r29	; 62
+ 1e4:	df 91       	pop	r29
+ 1e6:	cf 91       	pop	r28
+ 1e8:	1f 91       	pop	r17
+ 1ea:	08 95       	ret
+
+Disassembly of section .text.setup:
+
+000002b2 <setup>:
+
+void setup(void){
+	
+	CPU_CCP = CCP_IOREG_gc; // Write protection off
+ 2b2:	88 ed       	ldi	r24, 0xD8	; 216
+ 2b4:	84 bf       	out	0x34, r24	; 52
+	CLKCTRL.MCLKCTRLB = CLKCTRL_PEN_bm | CLKCTRL_PDIV_2X_gc; // 20 MHz clk, 2x Prescale = 10 MHZ
+ 2b6:	21 e0       	ldi	r18, 0x01	; 1
+ 2b8:	20 93 61 00 	sts	0x0061, r18	; 0x800061 <__RODATA_PM_OFFSET__+0x7f8061>
+
+	PORTB.DIRSET = DIO; // to output
+ 2bc:	e0 e2       	ldi	r30, 0x20	; 32
+ 2be:	f4 e0       	ldi	r31, 0x04	; 4
+ 2c0:	94 e0       	ldi	r25, 0x04	; 4
+ 2c2:	91 83       	std	Z+1, r25	; 0x01
+	PORTB.DIRSET = CLK; // to output
+ 2c4:	88 e0       	ldi	r24, 0x08	; 8
+ 2c6:	81 83       	std	Z+1, r24	; 0x01
+	PORTB.DIRSET = WO0; // to output
+ 2c8:	21 83       	std	Z+1, r18	; 0x01
+	PORTB.DIRSET = LED; // to output
+ 2ca:	22 e0       	ldi	r18, 0x02	; 2
+ 2cc:	21 83       	std	Z+1, r18	; 0x01
+	
+	PORTA.DIRCLR = PLAYB; // to input
+ 2ce:	e0 e0       	ldi	r30, 0x00	; 0
+ 2d0:	f4 e0       	ldi	r31, 0x04	; 4
+ 2d2:	22 83       	std	Z+2, r18	; 0x02
+	PORTA.PIN1CTRL = PORT_PULLUPEN_bm; // pullup on
+ 2d4:	81 8b       	std	Z+17, r24	; 0x11
+	PORTA.DIRCLR = NXTB; // to input
+ 2d6:	92 83       	std	Z+2, r25	; 0x02
+	PORTA.PIN2CTRL = PORT_PULLUPEN_bm; // pullup on
+ 2d8:	82 8b       	std	Z+18, r24	; 0x12
+	PORTA.DIRCLR = PREVB; // to input
+ 2da:	82 83       	std	Z+2, r24	; 0x02
+	PORTA.PIN3CTRL = PORT_PULLUPEN_bm; // pullup on
+ 2dc:	83 8b       	std	Z+19, r24	; 0x13
+	
+
+	TCA0.SINGLE.PER = 1000; // number to count to
+ 2de:	e0 e0       	ldi	r30, 0x00	; 0
+ 2e0:	fa e0       	ldi	r31, 0x0A	; 10
+ 2e2:	28 ee       	ldi	r18, 0xE8	; 232
+ 2e4:	33 e0       	ldi	r19, 0x03	; 3
+ 2e6:	26 a3       	std	Z+38, r18	; 0x26
+ 2e8:	37 a3       	std	Z+39, r19	; 0x27
+	TCA0.SINGLE.CMP0 = 500;
+ 2ea:	24 ef       	ldi	r18, 0xF4	; 244
+ 2ec:	31 e0       	ldi	r19, 0x01	; 1
+ 2ee:	20 a7       	std	Z+40, r18	; 0x28
+ 2f0:	31 a7       	std	Z+41, r19	; 0x29
+	TCA0.SINGLE.CTRLB = TCA_SINGLE_CMP0EN_bm | TCA_SINGLE_WGMODE_SINGLESLOPE_gc;
+ 2f2:	93 e1       	ldi	r25, 0x13	; 19
+ 2f4:	91 83       	std	Z+1, r25	; 0x01
+	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV16_gc; // CLKDIV 16
+ 2f6:	80 83       	st	Z, r24
+	TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
+ 2f8:	80 81       	ld	r24, Z
+ 2fa:	81 60       	ori	r24, 0x01	; 1
+ 2fc:	80 83       	st	Z, r24
+	
+	TM_displayInit();
+ 2fe:	86 d0       	rcall	.+268    	; 0x40c <TM_displayInit>
+ 300:	08 95       	ret
+
+Disassembly of section .text.set_frequency:
+
+000003d4 <set_frequency>:
+}
+
+void set_frequency(uint16_t fq){
+	TCA0.SINGLE.CMP0 = fq/2;
+ 3d4:	9c 01       	movw	r18, r24
+ 3d6:	36 95       	lsr	r19
+ 3d8:	27 95       	ror	r18
+ 3da:	e0 e0       	ldi	r30, 0x00	; 0
+ 3dc:	fa e0       	ldi	r31, 0x0A	; 10
+ 3de:	20 a7       	std	Z+40, r18	; 0x28
+ 3e0:	31 a7       	std	Z+41, r19	; 0x29
+	TCA0.SINGLE.PER = fq; // number to count to
+ 3e2:	86 a3       	std	Z+38, r24	; 0x26
+ 3e4:	97 a3       	std	Z+39, r25	; 0x27
+ 3e6:	08 95       	ret
+
+Disassembly of section .text.read_buttons:
+
+00000346 <read_buttons>:
+}
+ 
+ void read_buttons(void){
+	 
+	 b_next = 0;
+ 346:	10 92 05 3e 	sts	0x3E05, r1	; 0x803e05 <b_next>
+	 b_prev = 0;
+ 34a:	10 92 04 3e 	sts	0x3E04, r1	; 0x803e04 <b_prev>
+	 b_play = 0;
+ 34e:	10 92 03 3e 	sts	0x3E03, r1	; 0x803e03 <b_play>
+
+	 uint8_t buttonreg = PORTA.IN;
+ 352:	80 91 08 04 	lds	r24, 0x0408	; 0x800408 <__RODATA_PM_OFFSET__+0x7f8408>
+	 if (!(buttonreg & NXTB))
+ 356:	82 fd       	sbrc	r24, 2
+ 358:	03 c0       	rjmp	.+6      	; 0x360 <read_buttons+0x1a>
+	 {
+		 b_next = 1;
+ 35a:	91 e0       	ldi	r25, 0x01	; 1
+ 35c:	90 93 05 3e 	sts	0x3E05, r25	; 0x803e05 <b_next>
+	 }
+	 if (!(buttonreg & PREVB))
+ 360:	83 fd       	sbrc	r24, 3
+ 362:	03 c0       	rjmp	.+6      	; 0x36a <read_buttons+0x24>
+	 {
+		 b_prev = 1;
+ 364:	91 e0       	ldi	r25, 0x01	; 1
+ 366:	90 93 04 3e 	sts	0x3E04, r25	; 0x803e04 <b_prev>
+	 }
+	 if (!(buttonreg & PLAYB))
+ 36a:	81 fd       	sbrc	r24, 1
+ 36c:	03 c0       	rjmp	.+6      	; 0x374 <read_buttons+0x2e>
+	 {
+		 b_play = 1;
+ 36e:	81 e0       	ldi	r24, 0x01	; 1
+ 370:	80 93 03 3e 	sts	0x3E03, r24	; 0x803e03 <b_play>
+ 374:	08 95       	ret
+
+Disassembly of section .text.select_frequency:
+
+00000302 <select_frequency>:
+	 }
+ }
+ 
+ void select_frequency(void){
+	 if (b_next)
+ 302:	80 91 05 3e 	lds	r24, 0x3E05	; 0x803e05 <b_next>
+ 306:	88 23       	and	r24, r24
+ 308:	49 f0       	breq	.+18     	; 0x31c <select_frequency+0x1a>
+	 {
+		 FREQ = FREQ+10;
+ 30a:	80 91 00 3e 	lds	r24, 0x3E00	; 0x803e00 <_edata>
+ 30e:	90 91 01 3e 	lds	r25, 0x3E01	; 0x803e01 <_edata+0x1>
+ 312:	0a 96       	adiw	r24, 0x0a	; 10
+ 314:	80 93 00 3e 	sts	0x3E00, r24	; 0x803e00 <_edata>
+ 318:	90 93 01 3e 	sts	0x3E01, r25	; 0x803e01 <_edata+0x1>
+	 }
+	 if (b_prev)
+ 31c:	80 91 04 3e 	lds	r24, 0x3E04	; 0x803e04 <b_prev>
+ 320:	88 23       	and	r24, r24
+ 322:	59 f0       	breq	.+22     	; 0x33a <select_frequency+0x38>
+	 {
+		 if (FREQ != 0)
+ 324:	80 91 00 3e 	lds	r24, 0x3E00	; 0x803e00 <_edata>
+ 328:	90 91 01 3e 	lds	r25, 0x3E01	; 0x803e01 <_edata+0x1>
+ 32c:	00 97       	sbiw	r24, 0x00	; 0
+ 32e:	29 f0       	breq	.+10     	; 0x33a <select_frequency+0x38>
+		 {
+			FREQ = FREQ-10; 
+ 330:	0a 97       	sbiw	r24, 0x0a	; 10
+ 332:	80 93 00 3e 	sts	0x3E00, r24	; 0x803e00 <_edata>
+ 336:	90 93 01 3e 	sts	0x3E01, r25	; 0x803e01 <_edata+0x1>
+		 }
+	 }
+	 
+	 set_frequency(FREQ);
+ 33a:	80 91 00 3e 	lds	r24, 0x3E00	; 0x803e00 <_edata>
+ 33e:	90 91 01 3e 	lds	r25, 0x3E01	; 0x803e01 <_edata+0x1>
+ 342:	48 d0       	rcall	.+144    	; 0x3d4 <set_frequency>
+ 344:	08 95       	ret
+
+Disassembly of section .text.sound_disable:
+
+00000376 <sound_disable>:
+ }
+ 
+ void sound_disable(void){
+	 PORTB.OUTCLR = LED;
+ 376:	a0 e2       	ldi	r26, 0x20	; 32
+ 378:	b4 e0       	ldi	r27, 0x04	; 4
+ 37a:	82 e0       	ldi	r24, 0x02	; 2
+ 37c:	16 96       	adiw	r26, 0x06	; 6
+ 37e:	8c 93       	st	X, r24
+ 380:	16 97       	sbiw	r26, 0x06	; 6
+	 enable = 0;
+ 382:	10 92 02 3e 	sts	0x3E02, r1	; 0x803e02 <enable>
+	 TCA0.SINGLE.CTRLA &= ~TCA_SINGLE_ENABLE_bm ; // counter disable
+ 386:	e0 e0       	ldi	r30, 0x00	; 0
+ 388:	fa e0       	ldi	r31, 0x0A	; 10
+ 38a:	80 81       	ld	r24, Z
+ 38c:	8e 7f       	andi	r24, 0xFE	; 254
+ 38e:	80 83       	st	Z, r24
+	 TCA0.SINGLE.CTRLB &= ~TCA_SINGLE_CMP0EN_bm ;
+ 390:	81 81       	ldd	r24, Z+1	; 0x01
+ 392:	8f 7e       	andi	r24, 0xEF	; 239
+ 394:	81 83       	std	Z+1, r24	; 0x01
+	 PORTB.OUTCLR=WO0;
+ 396:	81 e0       	ldi	r24, 0x01	; 1
+ 398:	16 96       	adiw	r26, 0x06	; 6
+ 39a:	8c 93       	st	X, r24
+ 39c:	08 95       	ret
+
+Disassembly of section .text.sound_enable:
+
+0000039e <sound_enable>:
+ }
+ void sound_enable(){
+	 PORTB.OUTSET = LED;
+ 39e:	82 e0       	ldi	r24, 0x02	; 2
+ 3a0:	80 93 25 04 	sts	0x0425, r24	; 0x800425 <__RODATA_PM_OFFSET__+0x7f8425>
+	 enable = 1;
+ 3a4:	81 e0       	ldi	r24, 0x01	; 1
+ 3a6:	80 93 02 3e 	sts	0x3E02, r24	; 0x803e02 <enable>
+	 TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
+ 3aa:	e0 e0       	ldi	r30, 0x00	; 0
+ 3ac:	fa e0       	ldi	r31, 0x0A	; 10
+ 3ae:	80 81       	ld	r24, Z
+ 3b0:	81 60       	ori	r24, 0x01	; 1
+ 3b2:	80 83       	st	Z, r24
+	 TCA0.SINGLE.CTRLB |= TCA_SINGLE_CMP0EN_bm;
+ 3b4:	81 81       	ldd	r24, Z+1	; 0x01
+ 3b6:	80 61       	ori	r24, 0x10	; 16
+ 3b8:	81 83       	std	Z+1, r24	; 0x01
+ 3ba:	08 95       	ret
+
+Disassembly of section .text.main:
+
+000001ec <main>:
+ }
+  
+int main(void)
+{
+	setup();
+ 1ec:	62 d0       	rcall	.+196    	; 0x2b2 <setup>
+	sound_disable();
+ 1ee:	c3 d0       	rcall	.+390    	; 0x376 <sound_disable>
+	TM_printNumber(0000);
+ 1f0:	80 e0       	ldi	r24, 0x00	; 0
+ 1f2:	90 e0       	ldi	r25, 0x00	; 0
+ 1f4:	4a df       	rcall	.-364    	; 0x8a <_etext>
+ 1f6:	2f e7       	ldi	r18, 0x7F	; 127
+ 1f8:	84 e8       	ldi	r24, 0x84	; 132
+ 1fa:	9e e1       	ldi	r25, 0x1E	; 30
+ 1fc:	21 50       	subi	r18, 0x01	; 1
+ 1fe:	80 40       	sbci	r24, 0x00	; 0
+ 200:	90 40       	sbci	r25, 0x00	; 0
+ 202:	e1 f7       	brne	.-8      	; 0x1fc <main+0x10>
+ 204:	00 c0       	rjmp	.+0      	; 0x206 <__DATA_REGION_LENGTH__+0x6>
+ 206:	00 00       	nop
+	_delay_ms(1000);
+    while(1)
+    {
+		
+        read_buttons();
+ 208:	9e d0       	rcall	.+316    	; 0x346 <read_buttons>
+		select_frequency();
+ 20a:	7b d0       	rcall	.+246    	; 0x302 <select_frequency>
+		if (b_play)
+ 20c:	80 91 03 3e 	lds	r24, 0x3E03	; 0x803e03 <b_play>
+ 210:	88 23       	and	r24, r24
+ 212:	61 f0       	breq	.+24     	; 0x22c <__DATA_REGION_LENGTH__+0x2c>
+		{
+			if (enable == 0)
+ 214:	80 91 02 3e 	lds	r24, 0x3E02	; 0x803e02 <enable>
+ 218:	81 11       	cpse	r24, r1
+ 21a:	05 c0       	rjmp	.+10     	; 0x226 <__DATA_REGION_LENGTH__+0x26>
+			{
+				enable = 1;
+ 21c:	81 e0       	ldi	r24, 0x01	; 1
+ 21e:	80 93 02 3e 	sts	0x3E02, r24	; 0x803e02 <enable>
+				sound_enable();
+ 222:	bd d0       	rcall	.+378    	; 0x39e <sound_enable>
+ 224:	03 c0       	rjmp	.+6      	; 0x22c <__DATA_REGION_LENGTH__+0x2c>
+				
+			}
+			else {
+				enable = 0;
+ 226:	10 92 02 3e 	sts	0x3E02, r1	; 0x803e02 <enable>
+				sound_disable();
+ 22a:	a5 d0       	rcall	.+330    	; 0x376 <sound_disable>
+				
+			}
+			
+		}
+		TM_printNumber(FREQ);
+ 22c:	80 91 00 3e 	lds	r24, 0x3E00	; 0x803e00 <_edata>
+ 230:	90 91 01 3e 	lds	r25, 0x3E01	; 0x803e01 <_edata+0x1>
+ 234:	2a df       	rcall	.-428    	; 0x8a <_etext>
+		set_frequency(FREQ);
+ 236:	80 91 00 3e 	lds	r24, 0x3E00	; 0x803e00 <_edata>
+ 23a:	90 91 01 3e 	lds	r25, 0x3E01	; 0x803e01 <_edata+0x1>
+ 23e:	ca d0       	rcall	.+404    	; 0x3d4 <set_frequency>
+ 240:	2f e7       	ldi	r18, 0x7F	; 127
+ 242:	8a e1       	ldi	r24, 0x1A	; 26
+ 244:	96 e0       	ldi	r25, 0x06	; 6
+ 246:	21 50       	subi	r18, 0x01	; 1
+ 248:	80 40       	sbci	r24, 0x00	; 0
+ 24a:	90 40       	sbci	r25, 0x00	; 0
+ 24c:	e1 f7       	brne	.-8      	; 0x246 <__DATA_REGION_LENGTH__+0x46>
+ 24e:	00 c0       	rjmp	.+0      	; 0x250 <__DATA_REGION_LENGTH__+0x50>
+ 250:	00 00       	nop
+ 252:	da cf       	rjmp	.-76     	; 0x208 <__DATA_REGION_LENGTH__+0x8>
+
+Disassembly of section .text.libgcc.mul:
+
+000003bc <__umulhisi3>:
+ 3bc:	a2 9f       	mul	r26, r18
+ 3be:	b0 01       	movw	r22, r0
+ 3c0:	b3 9f       	mul	r27, r19
+ 3c2:	c0 01       	movw	r24, r0
+ 3c4:	a3 9f       	mul	r26, r19
+ 3c6:	01 d0       	rcall	.+2      	; 0x3ca <__umulhisi3+0xe>
+ 3c8:	b2 9f       	mul	r27, r18
+ 3ca:	70 0d       	add	r23, r0
+ 3cc:	81 1d       	adc	r24, r1
+ 3ce:	11 24       	eor	r1, r1
+ 3d0:	91 1d       	adc	r25, r1
+ 3d2:	08 95       	ret
 
 Disassembly of section .text.__dummy_fini:
 
-0000021a <_fini>:
- 21a:	08 95       	ret
+00000438 <_fini>:
+ 438:	08 95       	ret
 
 Disassembly of section .text.__dummy_funcs_on_exit:
 
-0000021c <__funcs_on_exit>:
- 21c:	08 95       	ret
+0000043a <__funcs_on_exit>:
+ 43a:	08 95       	ret
 
 Disassembly of section .text.__dummy_simulator_exit:
 
-0000021e <__simulator_exit>:
- 21e:	08 95       	ret
+0000043c <__simulator_exit>:
+ 43c:	08 95       	ret
 
 Disassembly of section .text.exit:
 
-0000020a <exit>:
- 20a:	ec 01       	movw	r28, r24
- 20c:	07 d0       	rcall	.+14     	; 0x21c <__funcs_on_exit>
- 20e:	05 d0       	rcall	.+10     	; 0x21a <_fini>
- 210:	ce 01       	movw	r24, r28
- 212:	05 d0       	rcall	.+10     	; 0x21e <__simulator_exit>
- 214:	ce 01       	movw	r24, r28
- 216:	04 d0       	rcall	.+8      	; 0x220 <_Exit>
+0000041e <exit>:
+ 41e:	ec 01       	movw	r28, r24
+ 420:	0c d0       	rcall	.+24     	; 0x43a <__funcs_on_exit>
+ 422:	0a d0       	rcall	.+20     	; 0x438 <_fini>
+ 424:	ce 01       	movw	r24, r28
+ 426:	0a d0       	rcall	.+20     	; 0x43c <__simulator_exit>
+ 428:	ce 01       	movw	r24, r28
+ 42a:	09 d0       	rcall	.+18     	; 0x43e <_Exit>
 
 Disassembly of section .text._Exit:
 
-00000220 <_Exit>:
- 220:	32 df       	rcall	.-412    	; 0x86 <_exit>
+0000043e <_Exit>:
+ 43e:	23 de       	rcall	.-954    	; 0x86 <_exit>
