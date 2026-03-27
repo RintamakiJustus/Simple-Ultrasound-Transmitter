@@ -123,15 +123,15 @@ void setup(void){
 	TCA0.SINGLE.PER = 1000; // number to count to
 	TCA0.SINGLE.CMP0 = 500;
 	TCA0.SINGLE.CTRLB = TCA_SINGLE_CMP0EN_bm | TCA_SINGLE_WGMODE_SINGLESLOPE_gc;
-	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV16_gc; // CLKDIV 16
+	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV1_gc; // CLKDIV 1, same as masterclock
 	TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm; // counter enable
 	
 	TM_displayInit();
 }
 
 void set_frequency(uint16_t fq){
-	TCA0.SINGLE.CMP0 = fq/2;
-	TCA0.SINGLE.PER = fq; // number to count to
+	TCA0.SINGLE.CMP0 = (uint16_t) (1000/fq)/2;
+	TCA0.SINGLE.PER = (uint16_t) 1000/fq; // number to count to
 }
  
  void read_buttons(void){
@@ -158,13 +158,13 @@ void set_frequency(uint16_t fq){
  void select_frequency(void){
 	 if (b_next)
 	 {
-		 FREQ = FREQ+10;
+		 FREQ = FREQ+1;
 	 }
 	 if (b_prev)
 	 {
 		 if (FREQ != 0)
 		 {
-			FREQ = FREQ-10; 
+			FREQ = FREQ-1; 
 		 }
 	 }
 	 
@@ -211,7 +211,7 @@ int main(void)
 			}
 			
 		}
-		TM_printNumber(FREQ);
+		TM_printNumber(FREQ*10);
 		set_frequency(FREQ);
 		_delay_ms(200);
     }

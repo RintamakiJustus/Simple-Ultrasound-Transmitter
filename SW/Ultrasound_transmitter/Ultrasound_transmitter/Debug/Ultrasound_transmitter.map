@@ -1,5 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
+c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+                              main.o (__udivmodhi4)
 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_copy_data.o)
                               main.o (__do_copy_data)
 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_umulhisi3.o)
@@ -18,6 +20,22 @@ Discarded input sections
  .text          0x0000000000000000        0x0 main.o
  .data          0x0000000000000000        0x0 main.o
  .bss           0x0000000000000000        0x0 main.o
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .stack.descriptors
+                0x0000000000000000       0x1a c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_copy_data.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_copy_data.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_copy_data.o)
@@ -352,11 +370,13 @@ END GROUP
  .comment       0x000000000000002f       0x30 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(_Exit.o)
 
 .stack.descriptors.hdr
-                0x0000000000000000       0x1c
+                0x0000000000000000       0x2a
  .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_umulhisi3.o)
+                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
  .stack.descriptors.hdr
-                0x000000000000000e        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_exit.o)
+                0x000000000000000e        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_umulhisi3.o)
+ .stack.descriptors.hdr
+                0x000000000000001c        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_exit.o)
 
 .note.GNU-stack
                 0x0000000000000000        0x0
@@ -388,15 +408,15 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x2a55
+.debug_info     0x0000000000000000     0x2a52
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x1566 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avrxmega3/short-calls/crtattiny814.o
- .debug_info    0x0000000000001566     0x14ef main.o
+ .debug_info    0x0000000000001566     0x14ec main.o
 
-.debug_abbrev   0x0000000000000000     0x16b5
+.debug_abbrev   0x0000000000000000     0x16a6
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000     0x143e C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avrxmega3/short-calls/crtattiny814.o
- .debug_abbrev  0x000000000000143e      0x277 main.o
+ .debug_abbrev  0x000000000000143e      0x268 main.o
 
 .debug_line     0x0000000000000000      0x59f
  *(.debug_line .debug_line.* .debug_line_end)
@@ -412,9 +432,9 @@ END GROUP
  .debug_str     0x0000000000000000      0x921 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avrxmega3/short-calls/crtattiny814.o
  .debug_str     0x0000000000000921       0x52 main.o
 
-.debug_loc      0x0000000000000000      0x13a
+.debug_loc      0x0000000000000000      0x162
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x13a main.o
+ .debug_loc     0x0000000000000000      0x162 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -475,128 +495,134 @@ LOAD data_init
                 0x000000000000008a      0x162 main.o
                 0x000000000000008a                TM_printNumber
 
-.text.main      0x00000000000001ec       0x68
- .text.main     0x00000000000001ec       0x68 main.o
+.text.main      0x00000000000001ec       0x7e
+ .text.main     0x00000000000001ec       0x7e main.o
                 0x00000000000001ec                main
 
 .text.TM_sendByte
-                0x0000000000000254       0x5e
+                0x000000000000026a       0x5e
  .text.TM_sendByte
-                0x0000000000000254       0x5e main.o
-                0x0000000000000254                TM_sendByte
+                0x000000000000026a       0x5e main.o
+                0x000000000000026a                TM_sendByte
 
-.text.setup     0x00000000000002b2       0x50
- .text.setup    0x00000000000002b2       0x50 main.o
-                0x00000000000002b2                setup
+.text.setup     0x00000000000002c8       0x50
+ .text.setup    0x00000000000002c8       0x50 main.o
+                0x00000000000002c8                setup
 
 .text.select_frequency
-                0x0000000000000302       0x44
+                0x0000000000000318       0x44
  .text.select_frequency
-                0x0000000000000302       0x44 main.o
-                0x0000000000000302                select_frequency
+                0x0000000000000318       0x44 main.o
+                0x0000000000000318                select_frequency
 
 .text.read_buttons
-                0x0000000000000346       0x30
+                0x000000000000035c       0x30
  .text.read_buttons
-                0x0000000000000346       0x30 main.o
-                0x0000000000000346                read_buttons
+                0x000000000000035c       0x30 main.o
+                0x000000000000035c                read_buttons
 
 .text.sound_disable
-                0x0000000000000376       0x28
+                0x000000000000038c       0x28
  .text.sound_disable
-                0x0000000000000376       0x28 main.o
-                0x0000000000000376                sound_disable
+                0x000000000000038c       0x28 main.o
+                0x000000000000038c                sound_disable
 
-.text.sound_enable
-                0x000000000000039e       0x1e
- .text.sound_enable
-                0x000000000000039e       0x1e main.o
-                0x000000000000039e                sound_enable
-
-.text.libgcc.mul
-                0x00000000000003bc       0x18
- .text.libgcc.mul
-                0x00000000000003bc       0x18 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_umulhisi3.o)
-                0x00000000000003bc                __umulhisi3
+.text.libgcc.div
+                0x00000000000003b4       0x28
+ .text.libgcc.div
+                0x00000000000003b4       0x28 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_udivmodhi4.o)
+                0x00000000000003b4                __udivmodhi4
 
 .text.set_frequency
-                0x00000000000003d4       0x14
+                0x00000000000003dc       0x20
  .text.set_frequency
-                0x00000000000003d4       0x14 main.o
-                0x00000000000003d4                set_frequency
+                0x00000000000003dc       0x20 main.o
+                0x00000000000003dc                set_frequency
 
-.text.TM_start  0x00000000000003e8       0x12
+.text.sound_enable
+                0x00000000000003fc       0x1e
+ .text.sound_enable
+                0x00000000000003fc       0x1e main.o
+                0x00000000000003fc                sound_enable
+
+.text.libgcc.mul
+                0x000000000000041a       0x18
+ .text.libgcc.mul
+                0x000000000000041a       0x18 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avrxmega3/short-calls\libgcc.a(_umulhisi3.o)
+                0x000000000000041a                __umulhisi3
+
+.text.TM_start  0x0000000000000432       0x12
  .text.TM_start
-                0x00000000000003e8       0x12 main.o
-                0x00000000000003e8                TM_start
+                0x0000000000000432       0x12 main.o
+                0x0000000000000432                TM_start
 
-.text.TM_stop   0x00000000000003fa       0x12
- .text.TM_stop  0x00000000000003fa       0x12 main.o
-                0x00000000000003fa                TM_stop
+.text.TM_stop   0x0000000000000444       0x12
+ .text.TM_stop  0x0000000000000444       0x12 main.o
+                0x0000000000000444                TM_stop
 
 .text.TM_displayInit
-                0x000000000000040c       0x12
+                0x0000000000000456       0x12
  .text.TM_displayInit
-                0x000000000000040c       0x12 main.o
-                0x000000000000040c                TM_displayInit
+                0x0000000000000456       0x12 main.o
+                0x0000000000000456                TM_displayInit
 
-.text.exit      0x000000000000041e        0xe
- .text.exit     0x000000000000041e        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(exit.o)
-                0x000000000000041e                exit
+.text.exit      0x0000000000000468        0xe
+ .text.exit     0x0000000000000468        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(exit.o)
+                0x0000000000000468                exit
 
 .rodata.digitMap
-                0x000000000080842c        0xa load address 0x000000000000042c
+                0x0000000000808476        0xa load address 0x0000000000000476
  .rodata.digitMap
-                0x000000000080842c        0xa main.o
-                0x000000000080842c                digitMap
+                0x0000000000808476        0xa main.o
+                0x0000000000808476                digitMap
 
-.text           0x0000000000000436        0x2
- .text          0x0000000000000436        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avrxmega3/short-calls/crtattiny814.o
-                0x0000000000000436                __vector_22
-                0x0000000000000436                __vector_1
-                0x0000000000000436                __vector_24
-                0x0000000000000436                __vector_12
-                0x0000000000000436                __bad_interrupt
-                0x0000000000000436                __vector_6
-                0x0000000000000436                __vector_3
-                0x0000000000000436                __vector_23
-                0x0000000000000436                __vector_25
-                0x0000000000000436                __vector_11
-                0x0000000000000436                __vector_13
-                0x0000000000000436                __vector_17
-                0x0000000000000436                __vector_19
-                0x0000000000000436                __vector_7
-                0x0000000000000436                __vector_5
-                0x0000000000000436                __vector_4
-                0x0000000000000436                __vector_9
-                0x0000000000000436                __vector_2
-                0x0000000000000436                __vector_21
-                0x0000000000000436                __vector_15
-                0x0000000000000436                __vector_8
-                0x0000000000000436                __vector_14
-                0x0000000000000436                __vector_10
-                0x0000000000000436                __vector_16
-                0x0000000000000436                __vector_18
-                0x0000000000000436                __vector_20
+.text           0x0000000000000480        0x2
+ .text          0x0000000000000480        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avrxmega3/short-calls/crtattiny814.o
+                0x0000000000000480                __vector_22
+                0x0000000000000480                __vector_1
+                0x0000000000000480                __vector_24
+                0x0000000000000480                __vector_12
+                0x0000000000000480                __bad_interrupt
+                0x0000000000000480                __vector_6
+                0x0000000000000480                __vector_3
+                0x0000000000000480                __vector_23
+                0x0000000000000480                __vector_25
+                0x0000000000000480                __vector_11
+                0x0000000000000480                __vector_13
+                0x0000000000000480                __vector_17
+                0x0000000000000480                __vector_19
+                0x0000000000000480                __vector_7
+                0x0000000000000480                __vector_5
+                0x0000000000000480                __vector_4
+                0x0000000000000480                __vector_9
+                0x0000000000000480                __vector_2
+                0x0000000000000480                __vector_21
+                0x0000000000000480                __vector_15
+                0x0000000000000480                __vector_8
+                0x0000000000000480                __vector_14
+                0x0000000000000480                __vector_10
+                0x0000000000000480                __vector_16
+                0x0000000000000480                __vector_18
+                0x0000000000000480                __vector_20
 
 .text.__dummy_fini
-                0x0000000000000438        0x2
+                0x0000000000000482        0x2
  .text.__dummy_fini
-                0x0000000000000438        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(exit.o)
-                0x0000000000000438                _fini
+                0x0000000000000482        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(exit.o)
+                0x0000000000000482                _fini
 
 .text.__dummy_funcs_on_exit
-                0x000000000000043a        0x2
+                0x0000000000000484        0x2
  .text.__dummy_funcs_on_exit
-                0x000000000000043a        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(exit.o)
-                0x000000000000043a                __funcs_on_exit
+                0x0000000000000484        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(exit.o)
+                0x0000000000000484                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x000000000000043c        0x2
+                0x0000000000000486        0x2
  .text.__dummy_simulator_exit
-                0x000000000000043c        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(exit.o)
-                0x000000000000043c                __simulator_exit
+                0x0000000000000486        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(exit.o)
+                0x0000000000000486                __simulator_exit
 
-.text._Exit     0x000000000000043e        0x2
- .text._Exit    0x000000000000043e        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(_Exit.o)
-                0x000000000000043e                _Exit
+.text._Exit     0x0000000000000488        0x2
+ .text._Exit    0x0000000000000488        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/short-calls\libc.a(_Exit.o)
+                0x0000000000000488                _Exit
